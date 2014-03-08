@@ -1,17 +1,17 @@
 <html ng-app >
 <head>
-	<title>CV: Michael Johannes Vogel</title>
+	<title>CV: </title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 	<script type="text/javascript" src="cv.js"></script>
 	<link type="text/css" rel="stylesheet" href="style.css"></link>
 </head>
-<body ng-controller="CvController">
+<body ng-controller="CvController" ng-init="instantiate('michael')">
 	<p id="title">
 		{{fullName}}
 	</p>
 	<p id="subtitle">
 		<span class="contact" ng-repeat="contact in contacts">
-			<a ng-href="{{contact.url}}"><img class="icon" src="{{contact.icon}}"></img></a>
+			<a ng-href="{{contact.url}}"><img class="icon" src="images/icons/{{contact.icon}}"></img></a>
 			{{contact.text}}
 		</span>
 	</p>
