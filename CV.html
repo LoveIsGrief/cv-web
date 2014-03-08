@@ -1,0 +1,83 @@
+<html ng-app >
+<head>
+	<title>CV: Michael Johannes Vogel</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+	<script type="text/javascript" src="cv.js"></script>
+	<link type="text/css" rel="stylesheet" href="style.css"></link>
+</head>
+<body ng-controller="CvController">
+	<p id="title">
+		{{fullName}}
+	</p>
+	<p id="subtitle">
+		<span class="contact" ng-repeat="contact in contacts">
+			<a ng-href="{{contact.url}}"><img class="icon" src="{{contact.icon}}"></img></a>
+			{{contact.text}}
+		</span>
+	</p>
+	<section>
+		<h1>Objective</h1>
+		<p id="objective">{{objective}}</p>
+	</section>
+	<section>
+		<h1>Employment History</h1>
+		<div ng-repeat="job in jobs| orderBy:'startDate'" class="job">
+			<h2 class="header">{{job.position}} at {{job.company}}</h2>
+			<p class="duration">{{job.startDate.toDateString()}} to {{job.endDate.toDateString()}}</p>
+			<p class="description">Description: {{job.description}}</p>
+			<div class="responsibilities">
+				Responsibilities:
+				<ul>
+					<li ng-repeat="responsibility in job.responsibilities">{{responsibility}}</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h1>Languages</h1>
+		<!-- Group by proficiency -->
+		<div class="level" ng-repeat="level in LanguageProficiency | filter: hasProficientLanguage">
+			<p class="header" >{{level}}</p>
+			<div class="languages tagContainer">
+				<!-- Sort by name -->
+				<span class="language tag" ng-repeat="language in languages|filter:{proficiency:level} | orderBy:'name'">
+					{{language.name}}
+				</span>
+				<p class="floatEnd"></p>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h1>Skills</h1>
+		<!-- Group by proficiency -->
+		<div class="level" ng-repeat="level in Proficiency | filter: hasProficientSkill">
+			<p class="header" >{{level}}</p>
+			<div class="skills tagContainer">
+				<!-- Sort by name -->
+				<span class="skill tag" ng-repeat="skill in skills|filter:{proficiency:level} | orderBy:'+name'">
+					{{skill.name}}
+				</span>
+				<p class="floatEnd"></p>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h1>Certificates</h1>
+		<!-- Group by proficiency -->
+		<table>
+			<tr class="certificate" ng-repeat="certificate in certificates | orderBy: 'acquisitionDate'">
+				<td>
+					{{certificate.acquisitionDate.toDateString()}}
+				</td>
+				<td>
+					<p>{{certificate.name}}</p>
+					<sub>{{certificate.notes}}</sub>
+				</td>
+			</tr>
+		</table>
+	</section>
+	<section>
+		<h1>References</h1>
+	</section>
+</body>
+</html>

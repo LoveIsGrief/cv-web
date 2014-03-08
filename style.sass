@@ -1,0 +1,71 @@
+$highlightColor: lightblue
+
+$mainColor: royalblue
+$subColor: darkblue
+$iconSize: 20px
+
+*
+	font-family: Courier New
+h1
+	color: $mainColor
+h2
+	color: $subColor
+
+#title, #subtitle
+	text-align: center
+	margin: 0
+
+#title
+	font-size: 200%
+	font-weight: bold
+	color: $mainColor
+
+.contact
+	.icon
+		height: $iconSize
+		width: $iconSize
+
+.tagContainer
+	background-color: white
+	.tag
+		border-radius: 15px
+		border-width: 1px
+		border-color: black
+		padding: 1px
+		margin: 2px
+		float: left
+		text-decoration: underline
+		border-top-style: dashed
+
+/* Add this at the end of a group of floating elements
+/* So that the parent extends to contain them
+
+.floatEnd
+	clear: both
+
+section
+	clear: both
+	*
+		margin: 0
+
+.responsibilities
+	/*float: right*/
+
+.level
+	float: left
+	border-top: solid 1px
+	border-radius: 15px
+	background-color: $highlightColor
+	.header
+		border-bottom: solid 1px
+		text-align: center
+
+
+.job
+	/*clear:both*/
+	.header
+		margin-top: 1em
+	.header, .duration
+		text-align: center
+
+
