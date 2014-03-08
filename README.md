@@ -1,5 +1,7 @@
-CV
+CV-web
 ===============
+
+A CV using HTML, AngularJS, Coffeescript and SASS.
 
 Had to update my CV and was too "lazy" to update 3 parts of it,
  plus I wasn't really looking forward to doing so few years.
