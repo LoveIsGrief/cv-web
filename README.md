@@ -17,7 +17,13 @@ How to use
 --------------------
 
 - Compile the coffeescript and sass files
-- Open html file
+- Open [CV.html](CV.html)
+
+How to add your CV
+--------------------
+
+ - Copy an existing CV (michael.coffee for now) and replace the information in it.
+ - Change CV.html to call `instantiate('<your CV filename without .js>')`
 
 Licensing
 ----------------
