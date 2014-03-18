@@ -1,7 +1,7 @@
 CV-web
 ===============
 
-A CV using HTML, AngularJS, Coffeescript and SASS.
+A CV using HTML, AngularJS, Coffeescript, NodeJS, SASS and Grunt.
 
 Had to update my CV and was too "lazy" to update 3 parts of it,
  plus I wasn't really looking forward to doing so few years.
@@ -10,14 +10,17 @@ so that might also be included in this...
 
 Prerequisites
 --------------------
- - [Coffeescript](http://coffeescript.org/#installation)
  - [SASS](http://sass-lang.com/install)
+ - [NodeJS](http://nodejs.org/download/)
+ 	- If you are on Ubuntu you might need to execute [these steps for npm](https://stackoverflow.com/questions/6237295/how-can-i-update-nodejs-and-npm-for-the-next-versions/17096621#17096621)
+ - [Grunt](http://gruntjs.com/getting-started)
 
 How to use
 --------------------
 
-- Compile the coffeescript and sass files
-- Open [CV.html](CV.html)
+- Execute the [steps](http://gruntjs.com/getting-started#working-with-an-existing-grunt-project) to build a Grunt project
+ 	- `npm install && grunt`
+- Open `build/CV.html`
 
 How to add your CV
 --------------------
