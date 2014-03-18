@@ -1,0 +1,31 @@
+{
+  "name": "cv-web",
+  "version": "0.0.0",
+  "description": "A CV maker from templates, javascript and sass",
+  "main": "coffee-script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LoveIsGrief/cv-web.git"
+  },
+  "keywords": [
+    "cv"
+  ],
+  "author": "Michael J. Vogel",
+  "license": "GNU v. 2",
+  "bugs": {
+    "url": "https://github.com/LoveIsGrief/cv-web/issues"
+  },
+  "homepage": "https://github.com/LoveIsGrief/cv-web",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-watch": "^0.6.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-coffee": "^0.10.1",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-coffeelint": "0.0.8"
+  }
+}

@@ -12,7 +12,7 @@ Array::containsWith = (property,value)->
 
 	# Read the CV from a js file
 	$scope.instantiate = (cvName)->
-		$http.get "#{cvName}.js"
+		$http.get "data/#{cvName}.js"
 		.success (js)->
 			cv = eval js
 			for key, value of cv(Proficiency, LanguageProficiency)
