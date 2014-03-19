@@ -26,7 +26,8 @@ How to add your CV
 --------------------
 
  - Copy an existing CV (michael.coffee for now) and replace the information in it.
- - Change CV.html to call `instantiate('<your CV filename without .js>')`
+ - If it doesn't exist in the build directory yet, create a file `candidate` with a single line containing the name of your .coffee CV-data
+ 	- This will allow you to load the same data in different templates (when they do come along)
 
 Licensing
 ----------------

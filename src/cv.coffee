@@ -11,7 +11,7 @@ Array::containsWith = (property,value)->
 @CvController = ($scope, $http) ->
 
 	# Read the CV from a js file
-	$scope.instantiate = (cvName)->
+	instantiate = (cvName)->
 		$http.get "data/#{cvName}.js"
 		.success (js)->
 			cv = eval js
@@ -19,6 +19,18 @@ Array::containsWith = (property,value)->
 				$scope[key] = value
 
 			document.title = "CV: #{$scope.fullName}"
+
+	# For local file access otherwise we get a DOMException
+	try
+		# Get the candidate's name from a file
+		$http.get("candidate")
+		.success instantiate
+		# Or fallback to default
+		.error ->
+			instantiate "michael"
+	catch e
+		instantiate "michael"
+
 
 	Proficiency = {
 		NOVICE: "Novice"
