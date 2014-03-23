@@ -96,11 +96,11 @@
 			employer: "GFI Informatique"
 			company: "Amadeus SAS"
 			responsibilities: [
-				"Developing modules for GUI"
-				"Designing class diagrams and core flow processes"
-				"Writing .dll and .so wrappers"
-				"Writing parsers and converters"
-				"Writing ASP.NET classes"
+				"Bug fixing, maintenance and non-regression testing (C++, internal applications, Python, zsh)"
+				"Implementation of new features (C++)"
+				"System configuration and technical architectural changes (XML, SQL)"
+				"Internal inter-application migration of backends"
+				"Weekly reporting of progress"
 			]
 			description: "Employed by GFI Informatique"
 			startDate: new Date "2011-10-19"
