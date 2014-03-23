@@ -103,9 +103,12 @@ module.exports = (grunt) ->
 				# 	livereload: true
 			templates:
 				files: [ "src/**/*.html" ]
-				tasks: [ "copy" ]
+				tasks: [ "copy:templates" ]
+			images:
+				files: ["images/*", "images/**/*"]
+				tasks: ["copy:images"]
 			livereload:
-				files: [ buildDir+"**/*" ]
+				files: [ buildDir+"**/*", buildDir+"*" ]
 				options:
 					livereload: true
 
