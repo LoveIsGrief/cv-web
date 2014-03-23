@@ -17,7 +17,7 @@
 			{{contact.text}}
 		</span>
 	</p>
-	<section>
+	<section ng-show="objective">
 		<h1>Objective</h1>
 		<p id="objective">{{objective}}</p>
 	</section>
@@ -26,7 +26,7 @@
 		<div ng-repeat="job in jobs| orderBy:'startDate'" class="job">
 			<h2 class="header">{{job.position}} at {{job.company}}</h2>
 			<p class="duration">{{job.startDate.toDateString()}} to {{job.endDate.toDateString()}}</p>
-			<p class="description">Description: {{job.description}}</p>
+			<p ng-show="job.description" class="description">Description: {{job.description}}</p>
 			<div class="responsibilities">
 				Responsibilities:
 				<ul>
@@ -35,7 +35,7 @@
 			</div>
 		</div>
 	</section>
-	<section>
+	<section ng-show="languages">
 		<h1>Languages</h1>
 		<!-- Group by proficiency -->
 		<div class="level" ng-repeat="level in LanguageProficiency | filter: hasProficientLanguage">
@@ -49,7 +49,7 @@
 			</div>
 		</div>
 	</section>
-	<section>
+	<section ng-show="skills">
 		<h1>Skills</h1>
 		<!-- Group by proficiency -->
 		<div class="level" ng-repeat="level in Proficiency | filter: hasProficientSkill">
@@ -63,7 +63,7 @@
 			</div>
 		</div>
 	</section>
-	<section>
+	<section ng-show="certificates">
 		<h1>Certificates</h1>
 		<!-- Group by proficiency -->
 		<table>
@@ -78,7 +78,7 @@
 			</tr>
 		</table>
 	</section>
-	<section>
+	<section ng-show="references">
 		<h1>References</h1>
 	</section>
 </body>
