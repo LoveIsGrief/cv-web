@@ -128,9 +128,7 @@ module.exports = (grunt) ->
 		phantomCommand = "#{phantomjs} #{phantomjsArgs.join " "}"
 		grunt.log.writeln "Exec: #{phantomCommand}"
 
-		phantomjs = shell.exec phantomCommand
-		if phantomjs.code != 0
-			grunt.log.error "#{phantomCommand} returned: #{phantomjs.code}"
+		phantomExec = shell.exec phantomCommand
+		if (returnCode = phantomExec.code) != 0
+			grunt.log.error "#{phantomCommand} returned: #{returnCode}"
 			return false
-		else
-			grunt.log.writeln phantomjs.output
