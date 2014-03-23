@@ -90,6 +90,25 @@ module.exports = (grunt) ->
 					dest: buildDir
 				]
 
+		watch:
+			scripts:
+				files: [ "**/*.coffee" ]
+				tasks: [ "coffeelint", "coffee" ]
+				# options:
+				# 	livereload: true
+			stylesheets:
+				files: [ "**/*.sass" ]
+				tasks: [ "sass" ]
+				# options:
+				# 	livereload: true
+			templates:
+				files: [ "src/**/*.html" ]
+				tasks: [ "copy" ]
+			livereload:
+				files: [ buildDir+"**/*" ]
+				options:
+					livereload: true
+
 	# Load the plugin that provides the "uglify" task.
 	grunt.loadNpmTasks "grunt-contrib-coffee"
 	grunt.loadNpmTasks "grunt-contrib-watch"
