@@ -4,21 +4,41 @@
 	cv.fullName = "Michael Johannes Vogel"
 	cv.contacts = [
 		{
-			icon: "linkedin.svg"
-			url: "http://www.linkedin.com/pub/michael-vogel/36/b11/647"
+			# Icon from https://www.iconfinder.com/icons/216637/github3_icon#size=128
+			# Thank you Daniel Bruce - http://danielbruce.se/
+			icon: "github.svg"
+			url: "https://github.com/LoveIsGrief"
+			tooltip: "Github"
+			text: "LoveIsGrief"
 		}
 		{
+			# From https://www.iconfinder.com/icons/107062/linkedin_icon#size=128
+			# Thank you Neil Hainsworth
+			icon: "linkedin.svg"
+			url: "http://www.linkedin.com/pub/michael-vogel/36/b11/647"
+			tooltip: "LinkedIn"
+		}
+		{
+			# From https://www.iconfinder.com/icons/259354/amazon_app_copy_email_services_icon#size=128
+			# Thank you Amazon webservices
 			icon: "email.svg"
 			url: "mailto:just.another.michaelv@gmail.com"
 			text: "just.another.michaelv@gmail.com"
+			tooltip: "Email"
 		}
 		{
+			# From https://www.iconfinder.com/icons/103632/mobile_phone_icon#size=128
+			# Thank you PICOL - http://www.picol.org
 			icon: "mobile.svg"
-			text: "(Personal) +33 6 20 14 01 65"
+			text: "+33 6 20 14 01 65"
+			tooltip: "Mobile phone"
 		}
 		{
+			# From https://www.iconfinder.com/icons/111025/phone_icon#size=128
+			# Thank you WPZOOM - http://www.wpzoom.com
 			icon: "workPhone.svg"
-			text: "(Work) +33 6 20 14 01 65"
+			text: "+33 6 20 14 01 65"
+			tooltip: "Work phone"
 		}
 	]
 

@@ -11,7 +11,9 @@
 	</p>
 	<p id="subtitle">
 		<span class="contact" ng-repeat="contact in contacts">
-			<a ng-href="{{contact.url}}"><img class="icon" src="images/icons/{{contact.icon}}"></img></a>
+			<a ng-href="{{contact.url}}" target="_blank">
+				<img class="icon" src="images/icons/{{contact.icon}}" title="{{contact.tooltip}}"></img>
+			</a>
 			{{contact.text}}
 		</span>
 	</p>
