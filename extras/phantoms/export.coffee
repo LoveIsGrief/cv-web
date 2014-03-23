@@ -21,7 +21,7 @@ openPages = (files)->
 			orientation: "portrait"
 		}
 		page.render file.dest
-		console.info "Exported: #{file.src}"
+		console.info "Exported: #{file.src} as #{file.dest}"
 		openPages files
 
 openPages args.files

@@ -3,17 +3,12 @@ args = require("system").args[1]
 fs = require("fs")
 
 args = JSON.parse args
-counter = 0
 
 # Recursive render of pages
 openPages = (files)->
 	phantom.exit() if files.length == 0
-	counter = counter + 1
-	console.info "Called: #{counter}"
 
-	# console.info JSON.stringify(files)
 	file = files.pop()
-	# console.info JSON.stringify(files)
 	page.open file.src, (status)->
 
 		# Fail on any error
@@ -27,9 +22,8 @@ openPages = (files)->
 			console.error "Problem writing #{file.dest}: #{e}"
 			phantom.exit(1)
 
-		# console.info JSON.stringify(files)
 		console.info "Rendered: #{file.src} to #{file.dest}"
-		openPages []
+		openPages files
 
 
 openPages args.files
