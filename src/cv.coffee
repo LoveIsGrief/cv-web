@@ -37,7 +37,12 @@ Array::containsWith = (property,value)->
 		INTERMEDIATE: "Intermediate"
 		ADVANCED: "Advanced"
 	}
-	$scope.Proficiency = Proficiency
+	$scope.Proficiency = [
+		Proficiency.NOVICE
+		Proficiency.INTERMEDIATE
+		Proficiency.ADVANCED
+	]
+
 	$scope.hasProficientSkill = (proficiency)->
 		$scope.skills.containsWith "proficiency", proficiency
 
@@ -47,7 +52,11 @@ Array::containsWith = (property,value)->
 		INTERMEDIATE: "Intermediate"
 		FLUENT: "Fluent"
 	}
-	$scope.LanguageProficiency = LanguageProficiency
+	$scope.LanguageProficiency = [
+		LanguageProficiency.BEGINNER
+		LanguageProficiency.INTERMEDIATE
+		LanguageProficiency.FLUENT
+	]
 
 	$scope.hasProficientLanguage = (proficiency)->
 		$scope.languages.containsWith "proficiency", proficiency
