@@ -69,7 +69,7 @@
 		<table>
 			<tr class="certificate" ng-repeat="certificate in certificates | orderBy: 'acquisitionDate'">
 				<td>
-					{{certificate.acquisitionDate.toDateString()}}
+					{{dateString(certificate.acquisitionDate)}}
 				</td>
 				<td>
 					<p>{{certificate.name}}</p>

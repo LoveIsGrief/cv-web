@@ -31,6 +31,8 @@ Array::containsWith = (property,value)->
 	catch e
 		instantiate "michael"
 
+	$scope.dateString = (date)->
+		"#{date.getMonth()+1}-#{date.getFullYear()}"
 
 	Proficiency = {
 		NOVICE: "Novice"
