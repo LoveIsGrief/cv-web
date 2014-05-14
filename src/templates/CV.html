@@ -35,6 +35,19 @@
 			</div>
 		</div>
 	</section>
+
+	<section ng-show="studies">
+		<h1>Education</h1>
+		<div ng-repeat="study in studies| orderBy:'startDate'" class="study">
+			<h2 class="header">{{study.university}}</h2>
+			<h3 class="subheader">
+				<small>{{dateString(study.startDate)}} to {{dateString(study.endDate)}}</small> |
+				{{study.degree}}
+			</h3>
+			<p ng-repeat="paragraph in study.description">{{paragraph}}</p>
+		</div>
+	</section>
+
 	<section ng-show="languages">
 		<h1>Languages</h1>
 		<!-- Group by proficiency -->
