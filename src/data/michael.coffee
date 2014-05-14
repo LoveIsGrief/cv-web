@@ -34,11 +34,11 @@
 			tooltip: "Mobile phone"
 		}
 		{
-			# From https://www.iconfinder.com/icons/111025/phone_icon#size=128
-			# Thank you WPZOOM - http://www.wpzoom.com
-			icon: "workPhone.svg"
-			text: "+33 6 20 14 01 65"
-			tooltip: "Work phone"
+			# https://www.iconfinder.com/icons/107179/circle_color_skype_icon#size=128
+			# Thank you  	Neil Hainsworth
+			icon: "skype.svg"
+			text: "michaels.cv"
+			tooltip: "Skype name"
 		}
 	]
 
@@ -74,6 +74,7 @@
 		{ name: "Java 6", proficiency: Proficiency.ADVANCED }
 		{ name: "C#", proficiency: Proficiency.ADVANCED }
 		{ name: "Linux (Debian)", proficiency: Proficiency.ADVANCED }
+		{ name: "Python", proficiency: Proficiency.INTERMEDIATE }
 	]
 
 	cv.jobs = [
@@ -98,6 +99,7 @@
 			responsibilities: [
 				"Bug fixing, maintenance and non-regression testing (C++, internal applications, Python, zsh)"
 				"Implementation of new features (C++)"
+				"Scripting with Python, Ruby and bash"
 				"System configuration and technical architectural changes (XML, SQL)"
 				"Internal inter-application migration of backends"
 				"Weekly reporting of progress"
@@ -106,6 +108,45 @@
 			startDate: new Date "2011-10-19"
 			endDate: new Date()
 		}
+	]
+
+	cv.studies = [
+		{
+			university: "Westsäschische Hochschule Zwickau"
+			degree: " BSc, Computer Science, System Development "
+			description: [
+				"Main university with:"
+				"- Bachelor's Thesis about writing a game in C# that could solve the Rubic's Cube"
+				"- Java followed by C++ as main languages of programming"
+				"- Smalltalk was taken as an optional subject"
+			]
+			startDate: new Date "2007-10-01"
+			endDate: new Date "2011-05-01"
+		}
+		{
+			university: " University of Technology, Sydney"
+			degree: " BSc, Computer Science"
+			description: [
+				"Semester abroad pertaining to studies in Zwickau."
+				"Subjects:"
+				"- Introduction to Game Development in C# using XNA"
+				"- Introduction to Multimedia including Flash"
+				"- Information Systems "
+			]
+			startDate: new Date "2010-08-01"
+			endDate: new Date "2010-12-20"
+		}
+		{
+			university: " Ivano-Frankivsk National Technical University of Oil and Gas"
+			degree: "BSc, Computer Science, System Development "
+			description: [
+				"- 6 week internship, programming a GUI application in Java individually"
+				"- weekly progress reports"
+			]
+			startDate: new Date "2009-07-19"
+			endDate: new Date "2009-08-30"
+		}
+
 	]
 
 	cv.certificates = [
