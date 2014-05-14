@@ -25,7 +25,7 @@
 		<h1>Employment History</h1>
 		<div ng-repeat="job in jobs| orderBy:'startDate'" class="job">
 			<h2 class="header">{{job.position}} at {{job.company}}</h2>
-			<p class="duration">{{job.startDate.toDateString()}} to {{job.endDate.toDateString()}}</p>
+			<p class="subheader">{{dateString(job.startDate)}} to {{dateString(job.endDate)}}</p>
 			<p ng-show="job.description" class="description">Description: {{job.description}}</p>
 			<div class="responsibilities">
 				Responsibilities:

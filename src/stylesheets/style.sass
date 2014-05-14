@@ -2,6 +2,7 @@ $highlightColor: lightblue
 
 $mainColor: royalblue
 $subColor: darkblue
+$lightSubColor: rgba(19, 109, 212, 1)
 $iconSize: 20px
 
 *
@@ -10,6 +11,8 @@ h1
 	color: $mainColor
 h2
 	color: $subColor
+h3
+	color: $lightSubColor
 
 // Center the body and make it more like a word document
 body
@@ -66,14 +69,9 @@ section
 	background-color: $highlightColor
 	.header
 		border-bottom: solid 1px
-		text-align: center
 
 
-.job
-	/*clear:both*/
-	.header
-		margin-top: 1em
-	.header, .duration
-		text-align: center
+.header, .subheader
+	text-align: center
 
 
