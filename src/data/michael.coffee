@@ -37,7 +37,7 @@
 			# https://www.iconfinder.com/icons/107179/circle_color_skype_icon#size=128
 			# Thank you  	Neil Hainsworth
 			icon: "skype.svg"
-			text: "michaels.cv"
+			text: "just.another.michaelv"
 			tooltip: "Skype name"
 		}
 	]
