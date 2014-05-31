@@ -42,12 +42,12 @@
 		}
 	]
 
-	cv.objective = "It is my goal to work in an environment
-	that allows me to grow both professionally and socially.
-	I would like to learn as much as I can from the people around me,
-	integrate myself as part of a team and
-	put my knowledge to good use developing products for customers
-	and the business.
+	cv.objective = "After a few years in C++ software development,
+	a side project has gotten me very interested in web development
+	and prompted me to change career paths to become a web developer.
+
+	I look to learn from those around me and work with an open and helpful team
+	to build eloquent web applications.
 	"
 
 	cv.skills = [
