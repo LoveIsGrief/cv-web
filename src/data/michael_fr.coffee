@@ -62,30 +62,220 @@
 	en travaillant dans une équipe ouverte et serviable."
 
 	cv.skills = [
-			{ name: "Smalltalk", proficiency: cv.Proficiency.NOVICE }
-			{ name: "(My)SQL", proficiency: cv.Proficiency.NOVICE }
-			{ name: "PHP", proficiency: cv.Proficiency.NOVICE }
-			{ name: "AutoIt", proficiency: cv.Proficiency.NOVICE }
-			{ name: "COBOL", proficiency: cv.Proficiency.NOVICE }
-			{ name: "Blender", proficiency: cv.Proficiency.NOVICE }
-			{ name: "Gimp", proficiency: cv.Proficiency.NOVICE }
-			{ name: "Assembly (x86)", proficiency: cv.Proficiency.NOVICE }
-			{ name: "Microsoft Excel", proficiency: cv.Proficiency.NOVICE }
-			{ name: "Microsoft Powerpoint", proficiency: cv.Proficiency.NOVICE }
-			{ name: "LibreOffice Writer", proficiency: cv.Proficiency.NOVICE }
-			{ name: "Microsoft Foundation Classes (MFC)", proficiency: cv.Proficiency.NOVICE }
-			{ name: "CSS", proficiency: cv.Proficiency.NOVICE }
-			{ name: "Ruby", proficiency: cv.Proficiency.INTERMEDIATE }
-			{ name: "Sublime Text", proficiency: cv.Proficiency.INTERMEDIATE }
-			{ name: "HTML", proficiency: cv.Proficiency.INTERMEDIATE }
-			{ name: "Ruby On Rails", proficiency: cv.Proficiency.INTERMEDIATE }
-			{ name: "Coffeescript", proficiency: cv.Proficiency.INTERMEDIATE }
-			{ name: "Javascript", proficiency: cv.Proficiency.INTERMEDIATE }
-			{ name: "C++", proficiency: cv.Proficiency.ADVANCED }
-			{ name: "Java 6", proficiency: cv.Proficiency.ADVANCED }
-			{ name: "C#", proficiency: cv.Proficiency.ADVANCED }
-			{ name: "Linux (Debian)", proficiency: cv.Proficiency.ADVANCED }
-			{ name: "Python", proficiency: cv.Proficiency.INTERMEDIATE }
+			{
+				name: "Smalltalk"
+				proficiency: cv.Proficiency.NOVICE
+				tags: [
+					"software dev"
+				]
+			}
+			{
+				name: "SailsJS"
+				proficiency: cv.Proficiency.NOVICE
+				tags: [
+					"webdev"
+				]
+			}
+			{
+				name: "ExpressJS"
+				proficiency: cv.Proficiency.NOVICE
+				tags: [
+					"webdev"
+				]
+			}
+			{
+				name: "(My)SQL"
+				proficiency: cv.Proficiency.NOVICE
+				tags: [
+					"webdev"
+					"software dev"
+					"database"
+				]
+			}
+			{
+				name: "PHP"
+				proficiency: cv.Proficiency.NOVICE
+				tags: [
+					"webdev"
+				]
+			}
+			{
+				name: "AutoIt"
+				proficiency: cv.Proficiency.NOVICE
+				tags: [
+					"scripting"
+				]
+			}
+			{
+				name: "COBOL"
+				proficiency: cv.Proficiency.NOVICE
+				tags: [
+					"software dev"
+				]
+			}
+			{
+				name: "Blender"
+				proficiency: cv.Proficiency.NOVICE
+				tags: [
+					"modeling"
+					"3D"
+					"design"
+				]
+			}
+			{
+				name: "Assembly (x86)"
+				proficiency: cv.Proficiency.NOVICE
+				tags: [
+					"software dev"
+					"system dev"
+				]
+			}
+			{
+				name: "Microsoft Excel"
+				proficiency: cv.Proficiency.NOVICE
+				tags: [
+					"office"
+				]
+			}
+			{
+				name: "Microsoft Powerpoint"
+				proficiency: cv.Proficiency.NOVICE
+				tags: [
+					"software"
+					"office"
+				]
+			}
+			{
+				name: "Microsoft Foundation Classes (MFC)"
+				proficiency: cv.Proficiency.NOVICE
+				tags: [
+					"software dev"
+					"framework"
+				]
+			}
+			{
+				name: "CSS/SASS"
+				proficiency: cv.Proficiency.INTERMEDIATE
+				tags: [
+					"webdev"
+					"styles"
+				]
+			}
+			{
+				name: "LibreOffice Writer"
+				proficiency: cv.Proficiency.INTERMEDIATE
+				tags: [
+					"office"
+					"software"
+				]
+			}
+			{
+				name: "Gimp"
+				proficiency: cv.Proficiency.INTERMEDIATE
+				tags: [
+					"picture"
+					"design"
+					"software"
+				]
+			}
+			{
+				name: "Ruby"
+				proficiency: cv.Proficiency.INTERMEDIATE
+				tags: [
+					"webdev"
+					"software dev"
+					"scripting"
+				]
+			}
+			{
+				name: "Sublime Text"
+				proficiency: cv.Proficiency.INTERMEDIATE
+				tags: [
+					"webdev"
+					"software dev"
+					"scripting"
+					"IDE"
+					"software"
+				]
+			}
+			{
+				name: "HTML"
+				proficiency: cv.Proficiency.INTERMEDIATE
+				tags: [
+					"webdev"
+				]
+			}
+			{
+				name: "Ruby On Rails"
+				proficiency: cv.Proficiency.INTERMEDIATE
+				tags: [
+					"webdev"
+				]
+			}
+			{
+				name: "Coffeescript"
+				proficiency: cv.Proficiency.INTERMEDIATE
+				tags: [
+					"webdev"
+					"software dev"
+				]
+			}
+			{
+				name: "Javascript"
+				proficiency: cv.Proficiency.INTERMEDIATE
+				tags: [
+					"webdev"
+					"software dev"
+				]
+			}
+			{
+				name: "C++"
+				proficiency: cv.Proficiency.ADVANCED
+				tags: [
+					"software dev"
+				]
+			}
+			{
+				name: "Java 6"
+				proficiency: cv.Proficiency.ADVANCED
+				tags: [
+					"software dev"
+				]
+			}
+			{
+				name: "C#"
+				proficiency: cv.Proficiency.ADVANCED
+				tags: [
+					"software dev"
+				]
+			}
+			{
+				name: "Linux (Debian)"
+				proficiency: cv.Proficiency.ADVANCED
+				tags: [
+					"OS"
+					"dev"
+				]
+			}
+			{
+				name: "Python"
+				proficiency: cv.Proficiency.INTERMEDIATE
+				tags: [
+					"webdev"
+					"software dev"
+					"scripting"
+				]
+			}
+			{
+				name: "NodeJS"
+				proficiency: cv.Proficiency.INTERMEDIATE
+				tags: [
+					"webdev"
+					"framework"
+					"software dev"
+					"scripting"
+				]
+			}
 		]
 
 	cv.jobs = [
