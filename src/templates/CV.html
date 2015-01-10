@@ -18,12 +18,12 @@
 		</span>
 	</p>
 	<section ng-show="cv.objective">
-		<h1>{{cv.objective.title}}</h1>
-		<p id="objective">{{cv.objective.text}}</p>
+		<h1>{{cv.i8n.objective}}</h1>
+		<p id="objective">{{cv.objective}}</p>
 	</section>
 	<section>
-		<h1>{{cv.jobs.title}}</h1>
-		<div ng-repeat="job in cv.jobs.jobs| orderBy:'-startDate'" class="job">
+		<h1>{{cv.i8n.jobs}}</h1>
+		<div ng-repeat="job in cv.jobs| orderBy:'-startDate'" class="job">
 			<h2 class="header">{{job.position}} at {{job.company}}</h2>
 			<h3 class="subheader">
 				<small>
@@ -41,8 +41,8 @@
 	</section>
 
 	<section ng-show="cv.studies">
-		<h1>{{cv.studies.title}}</h1>
-		<div ng-repeat="study in cv.studies.studies| orderBy:'-endDate'" class="study">
+		<h1>{{cv.i8n.studies}}</h1>
+		<div ng-repeat="study in cv.studies| orderBy:'-endDate'" class="study">
 			<h2 class="header">{{study.university}}</h2>
 			<h3 class="subheader">
 				<small>{{dateString(study.startDate)}} ---> {{dateString(study.endDate)}}</small> |
@@ -53,13 +53,13 @@
 	</section>
 
 	<section ng-show="cv.languages">
-		<h1>{{cv.languages.title}}</h1>
+		<h1>{{cv.i8n.languages}}</h1>
 		<!-- Group by proficiency -->
 		<div class="level" ng-repeat="level in LanguageProficiencyOrder | filter: hasProficientLanguage">
 			<p class="header" >{{level}}</p>
 			<div class="languages tagContainer">
 				<!-- Sort by name -->
-				<span class="language tag" ng-repeat="language in cv.languages.languages|filter:{proficiency:level} | orderBy:'name'">
+				<span class="language tag" ng-repeat="language in cv.languages |filter:{proficiency:level} | orderBy:'name'">
 					{{language.name}}
 				</span>
 				<p class="floatEnd"></p>
@@ -68,13 +68,13 @@
 		<p class="floatEnd"></p>
 	</section>
 	<section ng-show="cv.skills">
-		<h1>{{cv.skills.title}}</h1>
+		<h1>{{cv.i8n.skills}}</h1>
 		<!-- Group by proficiency -->
 		<div class="level" ng-repeat="level in ProficiencyOrder | filter: hasProficientSkill">
 			<p class="header" >{{level}}</p>
 			<div class="skills tagContainer">
 				<!-- Sort by name -->
-				<span class="skill tag" ng-repeat="skill in cv.skills.skills|filter:{proficiency:level} | orderBy:'+name'">
+				<span class="skill tag" ng-repeat="skill in cv.skills | filter:{proficiency:level} | orderBy:'+name'">
 					{{skill.name}}
 				</span>
 				<p class="floatEnd"></p>
@@ -83,10 +83,10 @@
 		<p class="floatEnd"></p>
 	</section>
 	<section ng-show="cv.certificates">
-		<h1>{{cv.certificates.title}}</h1>
+		<h1>{{cv.i8n.certificates}}</h1>
 		<!-- Group by proficiency -->
 		<table>
-			<tr class="certificate" ng-repeat="certificate in cv.certificates.certificates | orderBy: 'acquisitionDate'">
+			<tr class="certificate" ng-repeat="certificate in cv.certificates | orderBy: 'acquisitionDate'">
 				<td>
 					{{dateString(certificate.acquisitionDate)}}
 				</td>

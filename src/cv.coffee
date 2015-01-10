@@ -51,7 +51,7 @@ Array::containsWith = (property,value)->
 
 
 	$scope.hasProficientSkill = (proficiency)->
-		$scope.cv.skills.skills.containsWith "proficiency", proficiency
+		$scope.cv.skills.containsWith "proficiency", proficiency
 
 	$scope.hasProficientLanguage = (proficiency)->
-		$scope.cv.languages.languages.containsWith "proficiency", proficiency
+		$scope.cv.languages.containsWith "proficiency", proficiency

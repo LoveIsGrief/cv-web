@@ -54,9 +54,7 @@
 		}
 	]
 
-	cv.objective =
-		title: "Objective"
-		text: "After a few years in C++ software development,
+	cv.objective = "After a few years in C++ software development,
 	a side project has gotten me very interested in web development
 	and prompted me to change career paths to become a web developer.
 
@@ -64,9 +62,7 @@
 	to build eloquent web applications.
 	"
 
-	cv.skills =
-		title: "Skills"
-		skills: [
+	cv.skills = [
 			{ name: "Smalltalk", proficiency: cv.Proficiency.NOVICE }
 			{ name: "(My)SQL", proficiency: cv.Proficiency.NOVICE }
 			{ name: "PHP", proficiency: cv.Proficiency.NOVICE }
@@ -93,9 +89,7 @@
 			{ name: "Python", proficiency: cv.Proficiency.INTERMEDIATE }
 		]
 
-	cv.jobs =
-		title: "Work History"
-		jobs: [
+	cv.jobs = [
 			{
 				position: "Intern"
 				company: "Sikom Software"
@@ -128,9 +122,7 @@
 			}
 		]
 
-	cv.studies =
-		title: "Education"
-		studies: [
+	cv.studies = [
 			{
 				university: "Westsäschische Hochschule Zwickau"
 				degree: " BSc, Computer Science, System Development "
@@ -168,9 +160,7 @@
 			}
 		]
 
-	cv.certificates =
-		title: "Certificates"
-		certificates: [
+	cv.certificates = [
 			{
 				name: "Cambridge First Certificate in English (FCE)"
 				acquisitionDate: new Date "2008-02-13"
@@ -192,9 +182,7 @@
 			}
 		]
 
-	cv.languages =
-		title: "Languages"
-		languages:[
+	cv.languages = [
 			{ name: "English" , proficiency: cv.LanguageProficiency.FLUENT }
 			{ name: "German" , proficiency: cv.LanguageProficiency.FLUENT }
 			{ name: "French" , proficiency: cv.LanguageProficiency.INTERMEDIATE }
@@ -202,8 +190,12 @@
 		]
 
 	cv.i8n =
-		responsibilities: "Responsibilities"
+		certificates: "Certificates"
+		jobs: "Work History"
+		languages: "Languages"
 		now: "now"
-
-
+		objective: "Objective"
+		responsibilities: "Responsibilities"
+		skills: "Skills"
+		studies: "Education"
 	cv
