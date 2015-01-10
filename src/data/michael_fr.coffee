@@ -54,8 +54,8 @@
 		}
 	]
 
-	cv.objective = "Après quelques années de developpment en C++,
-	grace à un projet personnelle je suis devenu intéressé au développement web.
+	cv.objective = "Après quelques années de développement en C++,
+	grâce à un projet personnel je me suis intéressé au développement web.
 	Ça m'incite à changer mon parcours professionnel.
 
 	Je cherche à améliorer mes compétences avec les personnes autours de moi
@@ -93,10 +93,10 @@
 				position: "Stagiaire"
 				company: "Sikom Software"
 				responsibilities: [
-					"Développement de modules pour un GUI"
+					"Développement de modules pour une GUI"
 					"Design des diagrammes de classes et processus de flux de base"
-					"Écrire des wrappers .dll et .so"
-					"Écrire des parseurs et convertisseurs"
+					"Écriture des wrappers .dll et .so"
+					"Création des parseurs et convertisseurs"
 					"Développement avec ASP.NET"
 				]
 				description: ""
@@ -108,10 +108,10 @@
 				employer: "GFI Informatique"
 				company: "Amadeus SAS"
 				responsibilities: [
-					"Correction de bogues, maintenance et tests de non-regression (C++, applications internes, Python, zsh)"
-					"Implémentation de nouveau features (C++)"
-					"Écrire des scripts en Python, Ruby et bash/zsh"
-					"Configuration des systèmes et changements technique et architecturals (XML, SQL)"
+					"Correction de bugs, maintenance et tests de non-regression (C++, applications internes, Python, zsh)"
+					"Implémentation de nouvelles features (C++)"
+					"Écriture des scripts en Python, Ruby et bash/zsh"
+					"Configuration des systèmes et changements technique et architecturaux (XML, SQL)"
 					"Migration des backends entre plusieurs systems"
 					"Développement en Scrum avec du reportage hebdomadaire"
 				]
@@ -126,7 +126,7 @@
 				university: "Westsäschische Hochschule Zwickau"
 				degree: " BSc, Informatique, Développement des systemes"
 				description: [
-					"- Focus sur Java et C++ avec l'introduction en Assembler et Smalltalk"
+					"- Projets orientés sur Java et C++ avec l'introduction en Assembleur et Smalltalk"
 					"- Projet de fin d’étude: jeux éducationnel en C# pour l’apprentissage de la résolution du cube de Rubik (avec une résolution automatique)"
 				]
 				startDate: new Date "2007-10-01"
@@ -136,7 +136,7 @@
 				university: " University of Technology, Sydney"
 				degree: " BSc, Informatique"
 				description: [
-					"Semestre à l'étranger relevant aux études à Zwickau."
+					"Semestre à l'étranger pertinent aux études à Zwickau."
 					"Sujet:"
 					"- Introduction en \"Game Development\" avec C# en utilisant XNA"
 					"- Introduction en multimédia avec Flash"
