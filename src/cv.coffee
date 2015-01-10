@@ -41,14 +41,17 @@ Array::containsWith = (property,value)->
 	catch e
 		instantiate "michael"
 
+	# For the moment not configurable by user
+	# Code has to be edited
+	# Object to use with | filter
+	$scope.skillFilter = {}
+
 	# Returns MM-YYYY or i8n "now"
 	$scope.dateString = (date)->
 		if date.getMonth() == new Date().getMonth()
 			$scope.cv.i8n.now
 		else
 			"#{date.getMonth()+1}-#{date.getFullYear()}"
-
-
 
 	$scope.hasProficientSkill = (proficiency)->
 		$scope.cv.skills.containsWith "proficiency", proficiency

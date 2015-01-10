@@ -74,7 +74,7 @@
 			<p class="header" >{{level}}</p>
 			<div class="skills tagContainer">
 				<!-- Sort by name -->
-				<span class="skill tag" ng-repeat="skill in cv.skills | filter:{proficiency:level} | orderBy:'+name'">
+				<span class="skill tag" ng-repeat="skill in cv.skills | filter:{proficiency:level} | filter:skillFilter | orderBy:'+name'">
 					{{skill.name}}
 				</span>
 				<p class="floatEnd"></p>
