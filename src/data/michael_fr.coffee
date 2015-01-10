@@ -3,14 +3,14 @@
 
 	cv.Proficiency = {
 		NOVICE: "Novice"
-		INTERMEDIATE: "Intermediate"
-		ADVANCED: "Advanced"
+		INTERMEDIATE: "Intermédiaire"
+		ADVANCED: "Avancé"
 	}
 
 	cv.LanguageProficiency = {
 		BEGINNER: "Novice"
-		INTERMEDIATE: "Intermediate"
-		FLUENT: "Fluent"
+		INTERMEDIATE: "Intermédiaire"
+		FLUENT: "Courant"
 	}
 
 	cv.fullName = "Michael Johannes Vogel"
@@ -43,29 +43,28 @@
 			# Thank you PICOL - http://www.picol.org
 			icon: "mobile.svg"
 			text: "+33 6 20 14 01 65"
-			tooltip: "Mobile phone"
+			tooltip: "Telephone portable"
 		}
 		{
 			# https://www.iconfinder.com/icons/107179/circle_color_skype_icon#size=128
 			# Thank you  	Neil Hainsworth
 			icon: "skype.svg"
 			text: "just.another.michaelv"
-			tooltip: "Skype name"
+			tooltip: "Skype"
 		}
 	]
 
 	cv.objective =
-		title: "Objective"
-		text: "After a few years in C++ software development,
-	a side project has gotten me very interested in web development
-	and prompted me to change career paths to become a web developer.
+		title: "Objectif"
+		text: "Après quelques années de developpment en C++,
+	grace à un projet personnelle je suis devenu intéressé au développement web.
+	Ça m'incite à changer mon parcours professionnel.
 
-	I look to learn from those around me and work with an open and helpful team
-	to build eloquent web applications.
-	"
+	Je cherche à améliorer mes compétences avec les personnes autours de moi
+	en travaillant dans une équipe ouverte et serviable."
 
 	cv.skills =
-		title: "Skills"
+		title: "Compétences"
 		skills: [
 			{ name: "Smalltalk", proficiency: cv.Proficiency.NOVICE }
 			{ name: "(My)SQL", proficiency: cv.Proficiency.NOVICE }
@@ -94,82 +93,81 @@
 		]
 
 	cv.jobs =
-		title: "Work History"
+		title: "Histoire d'emploi"
 		jobs: [
 			{
-				position: "Intern"
+				position: "Stagiaire"
 				company: "Sikom Software"
 				responsibilities: [
-					"Developing modules for GUI"
-					"Designing class diagrams and core flow processes"
-					"Writing .dll and .so wrappers"
-					"Writing parsers and converters"
-					"Writing ASP.NET classes"
+					"Développement de modules pour un GUI"
+					"Design des diagrammes de classes et processus de flux de base"
+					"Écrire des wrappers .dll et .so"
+					"Écrire des parseurs et convertisseurs"
+					"Développement avec ASP.NET"
 				]
 				description: ""
 				startDate: new Date "2009-10-19"
 				endDate: new Date "2010-03-01"
 			}
 			{
-				position: "Software Developer (Contractor)"
+				position: "Développeur de logiciels (Consultant)"
 				employer: "GFI Informatique"
 				company: "Amadeus SAS"
 				responsibilities: [
-					"Bug fixing, maintenance and non-regression testing (C++, internal applications, Python, zsh)"
-					"Implementation of new features (C++)"
-					"Scripting with Python, Ruby and bash"
-					"System configuration and technical architectural changes (XML, SQL)"
-					"Internal inter-application migration of backends"
-					"Weekly reporting of progress"
+					"Correction de bogues, maintenance et tests de non-regression (C++, applications internes, Python, zsh)"
+					"Implémentation de nouveau features (C++)"
+					"Écrire des scripts en Python, Ruby et bash/zsh"
+					"Configuration des systèmes et changements technique et architecturals (XML, SQL)"
+					"Migration des backends entre plusieurs systems"
+					"Développement en Scrum avec du reportage hebdomadaire"
 				]
-				description: "Employed by GFI Informatique"
+				description: "Embauché par GFI Informatique"
 				startDate: new Date "2011-10-19"
 				endDate: new Date()
 			}
 		]
 
 	cv.studies =
-		title: "Education"
+		title: "Études"
 		studies: [
 			{
 				university: "Westsäschische Hochschule Zwickau"
-				degree: " BSc, Computer Science, System Development "
+				degree: " BSc, Informatique, Développement des systemes"
 				description: [
-					"Main university with:"
-					"- Bachelor's Thesis about writing a game in C# that could solve the Rubic's Cube"
-					"- Java followed by C++ as main languages of programming"
-					"- Smalltalk was taken as an optional subject"
+					"- Focus sur Java et C++ avec l'introduction en Assembler et Smalltalk"
+					"- Projet de fin d’étude: jeux éducationnel en C# pour l’apprentissage de la résolution du cube de Rubik (avec une résolution automatique)"
 				]
 				startDate: new Date "2007-10-01"
 				endDate: new Date "2011-05-01"
 			}
 			{
 				university: " University of Technology, Sydney"
-				degree: " BSc, Computer Science"
+				degree: " BSc, Informatique"
 				description: [
-					"Semester abroad pertaining to studies in Zwickau."
-					"Subjects:"
-					"- Introduction to Game Development in C# using XNA"
-					"- Introduction to Multimedia including Flash"
-					"- Information Systems "
+					"Semestre à l'étranger relevant aux études à Zwickau."
+					"Sujet:"
+					"- Introduction en \"Game Development\" avec C# en utilisant XNA"
+					"- Introduction en multimédia avec Flash"
+					"- Systèmes Informatiques"
 				]
 				startDate: new Date "2010-08-01"
 				endDate: new Date "2010-12-20"
 			}
 			{
 				university: " Ivano-Frankivsk National Technical University of Oil and Gas"
-				degree: "BSc, Computer Science, System Development "
+				degree: "BSc, Informatique, Développement des systèmes"
 				description: [
-					"- 6 week internship, programming a GUI application in Java individually"
-					"- weekly progress reports"
+					"- Stage de 6 semaines: développement d'une application GUI en Java"
+					"- reportage hebdomadaire"
 				]
 				startDate: new Date "2009-07-19"
 				endDate: new Date "2009-08-30"
 			}
+
 		]
 
 	cv.certificates =
-		title: "Certificates"
+		title: "Certificats"
 		certificates: [
 			{
 				name: "Cambridge First Certificate in English (FCE)"
@@ -192,18 +190,18 @@
 			}
 		]
 
+
 	cv.languages =
-		title: "Languages"
-		languages:[
-			{ name: "English" , proficiency: cv.LanguageProficiency.FLUENT }
-			{ name: "German" , proficiency: cv.LanguageProficiency.FLUENT }
-			{ name: "French" , proficiency: cv.LanguageProficiency.INTERMEDIATE }
+		title: "Langues"
+		languages: [
+			{ name: "Anglais" , proficiency: cv.LanguageProficiency.FLUENT }
+			{ name: "Allemand" , proficiency: cv.LanguageProficiency.FLUENT }
+			{ name: "Français" , proficiency: cv.LanguageProficiency.INTERMEDIATE }
 			{ name: "Ukrainian" , proficiency: cv.LanguageProficiency.BEGINNER }
 		]
 
 	cv.i8n =
-		responsibilities: "Responsibilities"
-		now: "now"
-
+		responsibilities: "Résponsabilités"
+		now: "maintenant"
 
 	cv

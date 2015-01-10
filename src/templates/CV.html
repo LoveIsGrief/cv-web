@@ -5,30 +5,34 @@
 	<script type="text/javascript" src="cv.js"></script>
 	<link type="text/css" rel="stylesheet" href="style.css"></link>
 </head>
-<body ng-controller="CvController">
+<body ng-controller="CvController" ng-show="cv">
 	<p id="title">
-		{{fullName}}
+		{{cv.fullName}}
 	</p>
 	<p id="subtitle">
-		<span class="contact" ng-repeat="contact in contacts">
+		<span class="contact" ng-repeat="contact in cv.contacts">
 			<a ng-href="{{contact.url}}" target="_blank">
 				<img class="icon" src="images/icons/{{contact.icon}}" title="{{contact.tooltip}}"></img>
 			</a>
 			{{contact.text}}
 		</span>
 	</p>
-	<section ng-show="objective">
-		<h1>Objective</h1>
-		<p id="objective">{{objective}}</p>
+	<section ng-show="cv.objective">
+		<h1>{{cv.objective.title}}</h1>
+		<p id="objective">{{cv.objective.text}}</p>
 	</section>
 	<section>
-		<h1>Employment History</h1>
-		<div ng-repeat="job in jobs| orderBy:'-startDate'" class="job">
+		<h1>{{cv.jobs.title}}</h1>
+		<div ng-repeat="job in cv.jobs.jobs| orderBy:'-startDate'" class="job">
 			<h2 class="header">{{job.position}} at {{job.company}}</h2>
-			<p class="subheader">{{dateString(job.startDate)}} to {{dateString(job.endDate)}}</p>
-			<p ng-show="job.description" class="description">Description: {{job.description}}</p>
+			<h3 class="subheader">
+				<small>
+					{{dateString(job.startDate)}} ---> {{dateString(job.endDate)}}
+				</small>
+			</h3>
+			<p ng-show="cv.job.description" class="description">Description: {{job.description}}</p>
 			<div class="responsibilities">
-				Responsibilities:
+				<b>{{cv.i8n.responsibilities}}:</b>
 				<ul>
 					<li ng-repeat="responsibility in job.responsibilities">{{responsibility}}</li>
 				</ul>
@@ -36,26 +40,26 @@
 		</div>
 	</section>
 
-	<section ng-show="studies">
-		<h1>Education</h1>
-		<div ng-repeat="study in studies| orderBy:'-endDate'" class="study">
+	<section ng-show="cv.studies">
+		<h1>{{cv.studies.title}}</h1>
+		<div ng-repeat="study in cv.studies.studies| orderBy:'-endDate'" class="study">
 			<h2 class="header">{{study.university}}</h2>
 			<h3 class="subheader">
-				<small>{{dateString(study.startDate)}} to {{dateString(study.endDate)}}</small> |
+				<small>{{dateString(study.startDate)}} ---> {{dateString(study.endDate)}}</small> |
 				{{study.degree}}
 			</h3>
 			<p ng-repeat="paragraph in study.description">{{paragraph}}</p>
 		</div>
 	</section>
 
-	<section ng-show="languages">
-		<h1>Languages</h1>
+	<section ng-show="cv.languages">
+		<h1>{{cv.languages.title}}</h1>
 		<!-- Group by proficiency -->
-		<div class="level" ng-repeat="level in LanguageProficiency | filter: hasProficientLanguage">
+		<div class="level" ng-repeat="level in LanguageProficiencyOrder | filter: hasProficientLanguage">
 			<p class="header" >{{level}}</p>
 			<div class="languages tagContainer">
 				<!-- Sort by name -->
-				<span class="language tag" ng-repeat="language in languages|filter:{proficiency:level} | orderBy:'name'">
+				<span class="language tag" ng-repeat="language in cv.languages.languages|filter:{proficiency:level} | orderBy:'name'">
 					{{language.name}}
 				</span>
 				<p class="floatEnd"></p>
@@ -63,14 +67,14 @@
 		</div>
 		<p class="floatEnd"></p>
 	</section>
-	<section ng-show="skills">
-		<h1>Skills</h1>
+	<section ng-show="cv.skills">
+		<h1>{{cv.skills.title}}</h1>
 		<!-- Group by proficiency -->
-		<div class="level" ng-repeat="level in Proficiency | filter: hasProficientSkill">
+		<div class="level" ng-repeat="level in ProficiencyOrder | filter: hasProficientSkill">
 			<p class="header" >{{level}}</p>
 			<div class="skills tagContainer">
 				<!-- Sort by name -->
-				<span class="skill tag" ng-repeat="skill in skills|filter:{proficiency:level} | orderBy:'+name'">
+				<span class="skill tag" ng-repeat="skill in cv.skills.skills|filter:{proficiency:level} | orderBy:'+name'">
 					{{skill.name}}
 				</span>
 				<p class="floatEnd"></p>
@@ -78,11 +82,11 @@
 		</div>
 		<p class="floatEnd"></p>
 	</section>
-	<section ng-show="certificates">
-		<h1>Certificates</h1>
+	<section ng-show="cv.certificates">
+		<h1>{{cv.certificates.title}}</h1>
 		<!-- Group by proficiency -->
 		<table>
-			<tr class="certificate" ng-repeat="certificate in certificates | orderBy: 'acquisitionDate'">
+			<tr class="certificate" ng-repeat="certificate in cv.certificates.certificates | orderBy: 'acquisitionDate'">
 				<td>
 					{{dateString(certificate.acquisitionDate)}}
 				</td>
@@ -93,8 +97,8 @@
 			</tr>
 		</table>
 	</section>
-	<section ng-show="references">
-		<h1>References</h1>
+	<section ng-show="cv.references">
+		<h1>{{cv.references.title}}</h1>
 	</section>
 </body>
 </html>

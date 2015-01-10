@@ -14,11 +14,21 @@ Array::containsWith = (property,value)->
 	instantiate = (cvName)->
 		$http.get "data/#{cvName}.js"
 		.success (js)->
-			cv = eval js
-			for key, value of cv(Proficiency, LanguageProficiency)
-				$scope[key] = value
+			$scope.cv = (eval js)()
 
-			document.title = "CV: #{$scope.fullName}"
+			$scope.ProficiencyOrder = [
+				$scope.cv.Proficiency.NOVICE
+				$scope.cv.Proficiency.INTERMEDIATE
+				$scope.cv.Proficiency.ADVANCED
+			]
+
+			$scope.LanguageProficiencyOrder = [
+				$scope.cv.LanguageProficiency.BEGINNER
+				$scope.cv.LanguageProficiency.INTERMEDIATE
+				$scope.cv.LanguageProficiency.FLUENT
+			]
+
+			document.title = "CV: #{$scope.cv.fullName}"
 
 	# For local file access otherwise we get a DOMException
 	try
@@ -31,34 +41,17 @@ Array::containsWith = (property,value)->
 	catch e
 		instantiate "michael"
 
+	# Returns MM-YYYY or i8n "now"
 	$scope.dateString = (date)->
-		"#{date.getMonth()+1}-#{date.getFullYear()}"
+		if date.getMonth() == new Date().getMonth()
+			$scope.cv.i8n.now
+		else
+			"#{date.getMonth()+1}-#{date.getFullYear()}"
 
-	Proficiency = {
-		NOVICE: "Novice"
-		INTERMEDIATE: "Intermediate"
-		ADVANCED: "Advanced"
-	}
-	$scope.Proficiency = [
-		Proficiency.NOVICE
-		Proficiency.INTERMEDIATE
-		Proficiency.ADVANCED
-	]
+
 
 	$scope.hasProficientSkill = (proficiency)->
-		$scope.skills.containsWith "proficiency", proficiency
-
-
-	LanguageProficiency = {
-		BEGINNER: "Novice"
-		INTERMEDIATE: "Intermediate"
-		FLUENT: "Fluent"
-	}
-	$scope.LanguageProficiency = [
-		LanguageProficiency.BEGINNER
-		LanguageProficiency.INTERMEDIATE
-		LanguageProficiency.FLUENT
-	]
+		$scope.cv.skills.skills.containsWith "proficiency", proficiency
 
 	$scope.hasProficientLanguage = (proficiency)->
-		$scope.languages.containsWith "proficiency", proficiency
+		$scope.cv.languages.languages.containsWith "proficiency", proficiency
