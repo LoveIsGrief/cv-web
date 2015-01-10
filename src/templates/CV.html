@@ -55,7 +55,7 @@
 	<section ng-show="cv.languages">
 		<h1>{{cv.i8n.languages}}</h1>
 		<!-- Group by proficiency -->
-		<div class="level" ng-repeat="level in LanguageProficiencyOrder | filter: hasProficientLanguage">
+		<div class="language-level" ng-repeat="level in LanguageProficiencyOrder | filter: hasProficientLanguage">
 			<p class="header" >{{level}}</p>
 			<div class="languages tagContainer">
 				<!-- Sort by name -->
@@ -70,7 +70,7 @@
 	<section ng-show="cv.skills">
 		<h1>{{cv.i8n.skills}}</h1>
 		<!-- Group by proficiency -->
-		<div class="level" ng-repeat="level in ProficiencyOrder | filter: hasProficientSkill">
+		<div class="skill-level" ng-repeat="level in ProficiencyOrder | filter: hasProficientSkill">
 			<p class="header" >{{level}}</p>
 			<div class="skills tagContainer">
 				<!-- Sort by name -->
