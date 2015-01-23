@@ -98,7 +98,29 @@
 		</table>
 	</section>
 	<section ng-show="cv.references">
-		<h1>{{cv.references.title}}</h1>
+		<h1>{{cv.i8n.references}}</h1>
+	</section>
+	<section ng-show="cv.projects">
+		<h1>{{cv.i8n.projects}}</h1>
+		<div ng-repeat="project in cv.projects" class="project">
+			<h2 class="header">
+				<a ng-href="{{project.url}}">
+					{{project.name}}
+				</a>
+			</h2>
+
+			<div class="technologies tagContainer">
+				<!-- Sort by name -->
+				<span class="tech tag" ng-repeat="tech in project.technologies | orderBy">
+					{{tech}}
+				</span>
+				<p class="floatEnd"></p>
+			</div>
+			<b>{{cv.i8n.description}}:</b>
+			<p ng-repeat="paragraph in project.description">
+				{{paragraph}}
+			</p>
+		</div>
 	</section>
 </body>
 </html>

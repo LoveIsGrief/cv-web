@@ -326,7 +326,7 @@
 				university: " University of Technology, Sydney"
 				degree: " BSc, Informatique"
 				description: [
-					"Semestre à l'étranger pertinent aux études à Zwickau."
+					"Semestre à l'étranger dans le cadre des études à Zwickau."
 					"Sujet:"
 					"- Introduction en \"Game Development\" avec C# en utilisant XNA"
 					"- Introduction en multimédia avec Flash"
@@ -340,7 +340,7 @@
 				degree: "BSc, Informatique, Développement des systèmes"
 				description: [
 					"- Stage de 6 semaines: développement d'une application GUI en Java"
-					"- reportage hebdomadaire"
+					"- rapport hebdomadaire"
 				]
 				startDate: new Date "2009-07-19"
 				endDate: new Date "2009-08-30"
@@ -378,12 +378,90 @@
 			{ name: "Ukrainian" , proficiency: cv.LanguageProficiency.BEGINNER }
 		]
 
+	cv.projects = [
+		{
+			name: "Projet privé d’initiation web"
+			description: [
+				"Premier projet web en pair, test-driven programming pour apprendre Angular et Ruby on Rails."
+				"Un utilisateur peut chercher et lire des contenus audio-visuels en utilisant les APIs de fournisseurs de contenu e.g youtube, soundcloud, dailymotion, etc."
+			]
+			technologies: [
+				"AngularJS"
+				"Ansible"
+				"Capistrano"
+				"Capybara"
+				"Codo"
+				"Coffeescript"
+				"HG/Mercurial"
+				"Jenkins CI"
+				"RDoc"
+				"Rspec"
+				"Ruby on Rails"
+				"Sublime"
+				"Thin (Webserver)"
+				"Ubuntu"
+				"Vagrant"
+				"VPS"
+			]
+		}
+		{
+			name: "webChatApp"
+			url: "https://github.com/LoveIsGrief/webchatApp"
+			description: [
+				"Premier projet pour apprendre nodejs en tant que serveur."
+				"Le but était d’avoir une application web pour chatter sur une seule page."
+			]
+			technologies: [
+				"AngularJS"
+				"Coffeescript"
+				"Git"
+				"Grunt"
+				"Jasmine"
+				"Karma Testrunner"
+				"Protractor"
+				"Socket.io"
+			]
+		}
+		{
+			name: "collaborative-playlist-views"
+			url: "http://loveisgrief.github.io/collaborative-playlist-views/"
+			description: [
+				"Conceptualisation et visualisation d'une idée pour la génération d'une liste de lecture collaborative à plusieurs utilisateurs."
+			]
+			technologies: [
+				"AngularJS"
+				"Bootstrap"
+				"Bower"
+				"Coffeescript"
+				"Git"
+				"Grunt"
+			]
+		}
+		{
+			name: "videojs-soundcloud"
+			url: "https://github.com/LoveIsGrief/videojs-soundcloud"
+			description: [
+				"Un plugin pour ajouter la capacité de lire un lien soundcloud dans un lecteur de média sur le web (video.js). Testé automatiquement après chaque changement de code"
+			]
+			technologies: [
+				"Codo"
+				"Coffeescript"
+				"Git"
+				"Grunt"
+				"Jasmine"
+				"Karma Testrunner"
+			]
+		}
+	]
+
 	cv.i8n =
 		certificates: "Certificats"
+		description: "Description"
 		jobs: "Histoire d'emploi"
 		languages: "Langues"
 		now: "maintenant"
 		objective: "Objectif"
+		projects: "Projets"
 		responsibilities: "Résponsabilités"
 		skills: "Compétences"
 		studies: "Education"
