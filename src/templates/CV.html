@@ -24,7 +24,7 @@
 	<section>
 		<h1>{{cv.i8n.jobs}}</h1>
 		<div ng-repeat="job in cv.jobs| orderBy:'-startDate'" class="job">
-			<h2 class="header">{{job.position}} at {{job.company}}</h2>
+			<h2 class="header">{{job.position}} {{cv.i8n.at}} {{job.company}}</h2>
 			<h3 class="subheader">
 				<small>
 					{{dateString(job.startDate)}} ---> {{dateString(job.endDate)}}
@@ -104,7 +104,7 @@
 		<h1>{{cv.i8n.projects}}</h1>
 		<div ng-repeat="project in cv.projects" class="project">
 			<h2 class="header">
-				<a ng-href="{{project.url}}">
+				<a class="header" ng-href="{{project.url}}">
 					{{project.name}}
 				</a>
 			</h2>

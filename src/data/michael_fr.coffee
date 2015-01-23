@@ -2,15 +2,15 @@
 	cv = {}
 
 	cv.Proficiency = {
-		NOVICE: "Novice"
+		NOVICE: "Débutant"
 		INTERMEDIATE: "Intermédiaire"
 		ADVANCED: "Avancé"
 	}
 
 	cv.LanguageProficiency = {
-		BEGINNER: "Novice"
+		BEGINNER: "Débutant"
 		INTERMEDIATE: "Intermédiaire"
-		FLUENT: "Courant"
+		FLUENT: "Maternelle"
 	}
 
 	cv.fullName = "Michael Johannes Vogel"
@@ -301,8 +301,8 @@
 					"Correction de bugs, maintenance et tests de non-regression (C++, applications internes, Python, zsh)"
 					"Implémentation de nouvelles features (C++)"
 					"Écriture des scripts en Python, Ruby et bash/zsh"
-					"Configuration des systèmes et changements technique et architecturaux (XML, SQL)"
-					"Migration des backends entre plusieurs systems"
+					"Configuration des systèmes et changements techniques et architecturaux (XML, SQL)"
+					"Migration de backends entre plusieurs systèms"
 					"Développement en Scrum avec du reportage hebdomadaire"
 				]
 				description: "Embauché par GFI Informatique"
@@ -314,10 +314,10 @@
 	cv.studies = [
 			{
 				university: "Westsäschische Hochschule Zwickau"
-				degree: " BSc, Informatique, Développement des systemes"
+				degree: " BSc, Informatique, Développement des systèmes"
 				description: [
-					"- Projets orientés sur Java et C++ avec l'introduction en Assembleur et Smalltalk"
-					"- Projet de fin d’étude: jeux éducationnel en C# pour l’apprentissage de la résolution du cube de Rubik (avec une résolution automatique)"
+					"- Projets orientés sur Java et C++ avec une première approche en Assembleur et Smalltalk"
+					"- Projet de fin d’étude: jeu éducatif en C# pour l’apprentissage de la résolution du Rubik's cube (avec une résolution automatique)"
 				]
 				startDate: new Date "2007-10-01"
 				endDate: new Date "2011-05-01"
@@ -328,8 +328,8 @@
 				description: [
 					"Semestre à l'étranger dans le cadre des études à Zwickau."
 					"Sujet:"
-					"- Introduction en \"Game Development\" avec C# en utilisant XNA"
-					"- Introduction en multimédia avec Flash"
+					"- Introduction au \"Game Development\" avec C# en utilisant XNA"
+					"- Introduction au multimédia avec Flash"
 					"- Systèmes Informatiques"
 				]
 				startDate: new Date "2010-08-01"
@@ -340,7 +340,7 @@
 				degree: "BSc, Informatique, Développement des systèmes"
 				description: [
 					"- Stage de 6 semaines: développement d'une application GUI en Java"
-					"- rapport hebdomadaire"
+					"- reporting hebdomadaire"
 				]
 				startDate: new Date "2009-07-19"
 				endDate: new Date "2009-08-30"
@@ -380,7 +380,7 @@
 
 	cv.projects = [
 		{
-			name: "Projet privé d’initiation web"
+			name: "Projet privé d’initiation au web"
 			description: [
 				"Premier projet web en pair, test-driven programming pour apprendre Angular et Ruby on Rails."
 				"Un utilisateur peut chercher et lire des contenus audio-visuels en utilisant les APIs de fournisseurs de contenu e.g youtube, soundcloud, dailymotion, etc."
@@ -455,15 +455,16 @@
 	]
 
 	cv.i8n =
-		certificates: "Certificats"
+		certificates: "Autres diplômes"
 		description: "Description"
-		jobs: "Histoire d'emploi"
+		jobs: "Experiences professionnelles"
 		languages: "Langues"
 		now: "maintenant"
 		objective: "Objectif"
 		projects: "Projets"
 		responsibilities: "Résponsabilités"
 		skills: "Compétences"
-		studies: "Education"
+		studies: "Etudes"
+		at: "à"
 
 	cv
