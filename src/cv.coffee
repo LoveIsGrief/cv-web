@@ -48,7 +48,7 @@ Array::containsWith = (property,value)->
 
 	# Returns MM-YYYY or i8n "now"
 	$scope.dateString = (date)->
-		if date.getMonth() == new Date().getMonth()
+		if date.getMonth() == new Date().getMonth() and date.getFullYear() == new Date().getFullYear()
 			$scope.cv.i8n.now
 		else
 			"#{date.getMonth()+1}-#{date.getFullYear()}"
