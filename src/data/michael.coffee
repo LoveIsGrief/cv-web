@@ -379,13 +379,94 @@
 			{ name: "Ukrainian" , proficiency: cv.LanguageProficiency.BEGINNER }
 		]
 
+	cv.projects = [
+		{
+			name: "Private web-initation project"
+			description: [
+				"First web-project made in pair-programming with test-driven development, the goal of which was to learn AngularJS and Ruby on Rails"
+				"A user can search and play audio and video content from different content providers like youtube, soundcloud and vimeo."
+			]
+			technologies: [
+				"AngularJS"
+				"Ansible"
+				"Capistrano"
+				"Capybara"
+				"Codo"
+				"Coffeescript"
+				"HG/Mercurial"
+				"Jenkins CI"
+				"RDoc"
+				"Rspec"
+				"Ruby on Rails"
+				"Sublime"
+				"Thin (Webserver)"
+				"Ubuntu"
+				"Vagrant"
+				"VPS"
+			]
+		}
+		{
+			name: "webChatApp"
+			url: "https://github.com/LoveIsGrief/webchatApp"
+			description: [
+				"First project using nodejs as a webserver."
+				"The goal was a single-page, web application for real-time chatting."
+			]
+			technologies: [
+				"AngularJS"
+				"Coffeescript"
+				"ExpressJS"
+				"Git"
+				"Grunt"
+				"Jasmine"
+				"Karma Testrunner"
+				"Protractor"
+				"Socket.io"
+			]
+		}
+		{
+			name: "collaborative-playlist-views"
+			url: "http://loveisgrief.github.io/collaborative-playlist-views/"
+			description: [
+				"A purely front-end, \"proof of concept\" project visualising an idea to facilitate collaborative playlist generation and use."
+			]
+			technologies: [
+				"AngularJS"
+				"Bootstrap"
+				"Bower"
+				"Coffeescript"
+				"Git"
+				"Grunt"
+			]
+		}
+		{
+			name: "videojs-soundcloud"
+			url: "https://github.com/LoveIsGrief/videojs-soundcloud"
+			description: [
+				"A plugin for the video.js web, media player to integrate soundcloud as a source of playback."
+			]
+			technologies: [
+				"Codo"
+				"Coffeescript"
+				"Git"
+				"Grunt"
+				"Jasmine"
+				"Karma Testrunner"
+				"TravisCI"
+			]
+		}
+	]
+
 	cv.i8n =
 		certificates: "Certificates"
+		description: "Description"
 		jobs: "Work History"
 		languages: "Languages"
 		now: "now"
 		objective: "Objective"
+		projects: "Projects"
 		responsibilities: "Responsibilities"
 		skills: "Skills"
 		studies: "Education"
+		at: "at"
 	cv

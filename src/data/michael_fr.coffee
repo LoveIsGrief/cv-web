@@ -414,6 +414,7 @@
 			technologies: [
 				"AngularJS"
 				"Coffeescript"
+				"ExpressJS"
 				"Git"
 				"Grunt"
 				"Jasmine"
