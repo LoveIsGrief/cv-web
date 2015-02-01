@@ -61,4 +61,5 @@ Array::containsWith = (property,value)->
 		$scope.cv.skills.containsWith "proficiency", proficiency
 
 	$scope.hasProficientLanguage = (proficiency)->
+		return false if proficiency == $scope.cv.LanguageProficiency.BEGINNER
 		$scope.cv.languages.containsWith "proficiency", proficiency
