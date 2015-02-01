@@ -44,7 +44,11 @@ Array::containsWith = (property,value)->
 	# For the moment not configurable by user
 	# Code has to be edited
 	# Object to use with | filter
-	$scope.skillFilter = {}
+
+	$scope.skillHasTag = (skill, tag) ->
+		for aTag in skill.tags
+			return true if aTag == tag
+		false
 
 	# Returns MM-YYYY or i8n "now"
 	$scope.dateString = (date)->
