@@ -1,0 +1,73 @@
+extends ./layout.jade
+
+block head
+	link(type='text/css', rel='stylesheet', href='style.css')
+
+block body
+	p#title
+		| {{fullName}}
+
+	p#subtitle
+		span.contact(ng-repeat='contact in contacts')
+			a(ng-href='{{contact.url}}', target='_blank')
+				img.icon(src='images/icons/{{contact.icon}}', title='{{contact.tooltip}}')
+
+	section(ng-show='objective')
+		h1 Objective
+		p#objective {{objective}}
+
+	section
+		h1 Employment History
+		.job(ng-repeat="job in jobs| orderBy:'-startDate'")
+			h2.header {{job.position}} at {{job.company}}
+			p.subheader {{dateString(job.startDate)}} to {{dateString(job.endDate)}}
+			p.description(ng-show='job.description') Description: {{job.description}}
+			.responsibilities
+				| Responsibilities:
+				ul
+					li(ng-repeat='responsibility in job.responsibilities') {{responsibility}}
+
+	section(ng-show='studies')
+		h1 Education
+		.study(ng-repeat="study in studies| orderBy:'-endDate'")
+			h2.header {{study.university}}
+			h3.subheader
+				small {{dateString(study.startDate)}} to {{dateString(study.endDate)}}
+				| {{study.degree}}
+			p(ng-repeat='paragraph in study.description') {{paragraph}}
+
+	section(ng-show='languages')
+		h1 Languages
+		// Group by proficiency
+		.level(ng-repeat='level in LanguageProficiency | filter: hasProficientLanguage')
+			p.header {{level}}
+			.languages.tagContainer
+				// Sort by name
+				span.language.tag(ng-repeat="language in languages|filter:{proficiency:level} | orderBy:'name'")
+					| {{language.name}}
+				p.floatEnd
+		p.floatEnd
+
+	section(ng-show='skills')
+		h1 Skills
+		// Group by proficiency
+		.level(ng-repeat='level in Proficiency | filter: hasProficientSkill')
+			p.header {{level}}
+			.skills.tagContainer
+				// Sort by name
+				span.skill.tag(ng-repeat="skill in skills|filter:{proficiency:level} | orderBy:'+name'")
+					| {{skill.name}}
+				p.floatEnd
+		p.floatEnd
+
+	section(ng-show='certificates')
+		h1 Certificates
+		table
+			tr.certificate(ng-repeat="certificate in certificates | orderBy: 'acquisitionDate'")
+				td {{dateString(certificate.acquisitionDate)}}
+				td
+					p {{certificate.name}}
+					sub {{certificate.notes}}
+
+	section(ng-show='references')
+		h1 References

@@ -1,0 +1,99 @@
+<html ng-app >
+<head>
+	<title>CV: </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+	<script type="text/javascript" src="cv.js"></script>
+	<link type="text/css" rel="stylesheet" href="1page.css"></link>
+</head>
+<body ng-controller="CvController" ng-show="cv">
+	<p id="title">
+		{{cv.fullName}}
+	</p>
+	<p id="subtitle">
+		<span class="contact" ng-repeat="contact in cv.contacts">
+			<a ng-href="{{contact.url}}" target="_blank">
+				<img class="icon" src="images/icons/{{contact.icon}}" title="{{contact.tooltip}}"></img>
+			</a>
+			{{contact.text}}
+		</span>
+	</p>
+	<section ng-show="cv.objective">
+		<h1>{{cv.i8n.objective}}</h1>
+		<p id="objective">{{cv.objective}}</p>
+	</section>
+	<section>
+		<h1>{{cv.i8n.jobs}}</h1>
+		<div ng-repeat="job in cv.jobs| orderBy:'-startDate'" class="job">
+			<h2 class="header">{{job.position}} {{cv.i8n.at}} {{job.company}}</h2>
+			<h3 class="subheader">
+				<small>
+					{{dateString(job.startDate)}} ---> {{dateString(job.endDate)}}
+				</small>
+			</h3>
+			<p ng-show="cv.job.description" class="description">Description: {{job.description}}</p>
+			<div class="responsibilities">
+				<b>{{cv.i8n.responsibilities}}:</b>
+				<ul>
+					<li ng-repeat="responsibility in job.responsibilities">{{responsibility}}</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<h1>{{cv.i8n.studies}}</h1>
+		<div
+		ng-repeat="study in cv.studies| orderBy:'-endDate'"
+		ng-class-odd="'left study'" ng-class-even="'right study'">
+			<h2 class="header">{{study.university}}</h2>
+			<h3 class="subheader">
+				<small>{{dateString(study.startDate)}} ---> {{dateString(study.endDate)}}</small> |
+				{{study.degree}}
+			</h3>
+			<p ng-repeat="paragraph in study.description">{{paragraph}}</p>
+		</div>
+		<div class="certificates right">
+			<h1>{{cv.i8n.certificates}}</h1>
+			<!-- Group by proficiency -->
+			<table>
+				<tr class="certificate" ng-repeat="certificate in cv.certificates | orderBy: 'acquisitionDate'">
+					<td>
+						{{dateString(certificate.acquisitionDate)}}
+					</td>
+					<td>
+						<p>{{certificate.name}}</p>
+						<sub>{{certificate.notes}}</sub>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<p class="floatEnd"></p>
+	</section>
+
+	<section ng-show="cv.languages">
+		<h1 id="languagesHeader" >{{cv.i8n.languages}}</h1>
+		<!-- Group by proficiency -->
+		<span ng-repeat="level in LanguageProficiencyOrder | filter: hasProficientLanguage"
+		class="languageGroup">
+			<span class="alanguage-level" >{{level}} :</span>
+			<!-- Sort by name -->
+			<span class="language" ng-repeat="language in cv.languages |filter:{proficiency:level} | orderBy:'name'">
+				{{language.name}}
+				<span ng-hide="$last">, </span>
+			</span>
+		</span>
+		<p class="floatEnd"></p>
+	</section>
+	<section ng-show="cv.skills">
+		<h1>{{cv.i8n.skills}}</h1>
+		<span
+		class="skill tag"
+		ng-class="{ skill: true, tag: true, importantSkill: skillHasTag(skill,'webdev') }"
+		ng-repeat="skill in cv.skills | filter:skillFilter | orderBy:'+name'">
+			{{skill.name}}
+		</span>
+		<!-- Sort by name -->
+		<p class="floatEnd"></p>
+	</section>
+</body>
+</html>
