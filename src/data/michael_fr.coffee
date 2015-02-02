@@ -10,6 +10,7 @@
 	cv.LanguageProficiency = {
 		BEGINNER: "Débutant"
 		INTERMEDIATE: "Intermédiaire"
+		ADVANCED: "Avancé"
 		FLUENT: "Maternelle"
 	}
 
@@ -374,7 +375,7 @@
 	cv.languages = [
 			{ name: "Anglais" , proficiency: cv.LanguageProficiency.FLUENT }
 			{ name: "Allemand" , proficiency: cv.LanguageProficiency.FLUENT }
-			{ name: "Français" , proficiency: cv.LanguageProficiency.INTERMEDIATE }
+			{ name: "Français" , proficiency: cv.LanguageProficiency.ADVANCED }
 			{ name: "Ukrainian" , proficiency: cv.LanguageProficiency.BEGINNER }
 		]
 
