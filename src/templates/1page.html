@@ -20,7 +20,7 @@
 	</p>
 	<section ng-show="cv.objective">
 		<h1>{{cv.i8n.objective}}</h1>
-		<p id="objective">{{cv.objective}}</p>
+		<p id="objective" ng-bind-html="cv.objective"></p>
 	</section>
 	<section>
 		<h1>{{cv.i8n.jobs}}</h1>
