@@ -1,14 +1,17 @@
-<html ng-app >
+<html ng-app="CVapp" >
 <head>
 	<title>CV: </title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-sanitize.js"></script>
 	<script type="text/javascript" src="cv.js"></script>
 	<link type="text/css" rel="stylesheet" href="style.css"></link>
 </head>
 <body ng-controller="CvController" ng-show="cv">
+
 	<p id="title">
 		{{cv.fullName}}
 	</p>
+
 	<p id="subtitle">
 		<span class="contact" ng-repeat="contact in cv.contacts">
 			<a ng-href="{{contact.url}}" target="_blank">
@@ -17,10 +20,12 @@
 			{{contact.text}}
 		</span>
 	</p>
+
 	<section ng-show="cv.objective">
 		<h1>{{cv.i8n.objective}}</h1>
 		<p id="objective">{{cv.objective}}</p>
 	</section>
+
 	<section>
 		<h1>{{cv.i8n.jobs}}</h1>
 		<div ng-repeat="job in cv.jobs| orderBy:'-startDate'" class="job">
@@ -67,6 +72,7 @@
 		</div>
 		<p class="floatEnd"></p>
 	</section>
+
 	<section ng-show="cv.skills">
 		<h1>{{cv.i8n.skills}}</h1>
 		<!-- Group by proficiency -->
@@ -97,9 +103,11 @@
 			</tr>
 		</table>
 	</section>
+
 	<section ng-show="cv.references">
 		<h1>{{cv.i8n.references}}</h1>
 	</section>
+
 	<section ng-show="cv.projects">
 		<h1>{{cv.i8n.projects}}</h1>
 		<div ng-repeat="project in cv.projects" class="project">

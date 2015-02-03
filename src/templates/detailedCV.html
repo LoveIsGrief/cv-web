@@ -20,9 +20,77 @@
 	</p>
 	<section ng-show="cv.objective">
 		<h1>{{cv.i8n.objective}}</h1>
-		<p id="objective">{{cv.objective}}</p>
+		<p id="objective" ng-bind-html="cv.objective"></p>
 	</section>
-	<section>
+
+	<section ng-show="cv.languages">
+		<h1 id="languagesHeader" >{{cv.i8n.languages}}</h1>
+		<!-- Group by proficiency -->
+		<span ng-repeat="level in LanguageProficiencyOrder | filter: hasProficientLanguage"
+		class="languageGroup">
+			<span class="alanguage-level" >{{level}} :</span>
+			<!-- Sort by name -->
+			<span class="language" ng-repeat="language in cv.languages |filter:{proficiency:level} | orderBy:'name'">
+				{{language.name}}
+				<span ng-hide="$last">, </span>
+			</span>
+		</span>
+		<p class="floatEnd"></p>
+	</section>
+
+	<section ng-show="cv.skills">
+		<h1>{{cv.i8n.skills}}</h1>
+		<span
+		class="skill tag"
+		ng-class="{ skill: true, tag: true, importantSkill: skillHasTag(skill,'webdev') }"
+		ng-repeat="skill in cv.skills | filter:skillFilter | orderBy:'+name'">
+			{{skill.name}}
+		</span>
+		<!-- Sort by name -->
+		<p class="floatEnd"></p>
+	</section>
+
+	<section ng-show="cv.projects">
+		<h1>{{cv.i8n.projects}}</h1>
+		<div ng-repeat="project in cv.projects" class="project">
+			<h2 class="header">
+				<a class="header" ng-href="{{project.url}}">
+					{{project.name}}
+				</a>
+			</h2>
+
+			<div class="technologies tagContainer">
+				<!-- Sort by name -->
+				<span class="tech tag" ng-repeat="tech in project.technologies | orderBy">
+					{{tech}}
+				</span>
+				<p class="floatEnd"></p>
+			</div>
+
+			<div class="subSection" >
+				<b>{{cv.i8n.description}}:</b>
+				<p ng-repeat="paragraph in project.description">
+					{{paragraph}}
+				</p>
+			</div>
+
+			<div class="subSection" >
+				<b>{{cv.i8n.role}}:</b>
+				<p>{{project.role}}</p>
+			</div>
+
+			<div class="subSection" >
+				<b>{{cv.i8n.actions}}:</b>
+				<ul>
+					<li ng-repeat="paragraph in project.actions">
+						{{paragraph}}
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section ng-show="cv.jobs">
 		<h1>{{cv.i8n.jobs}}</h1>
 		<div ng-repeat="job in cv.jobs| orderBy:'-startDate'" class="job">
 			<h2 class="header">{{job.position}} {{cv.i8n.at}} {{job.company}}</h2>
@@ -39,9 +107,9 @@
 				</ul>
 			</div>
 		</div>
-	</section>
 
-	<section>
+	</section>
+		<section ng-show="cv.studies">
 		<h1>{{cv.i8n.studies}}</h1>
 		<div
 		ng-repeat="study in cv.studies| orderBy:'-endDate'"
@@ -71,30 +139,5 @@
 		<p class="floatEnd"></p>
 	</section>
 
-	<section ng-show="cv.languages">
-		<h1 id="languagesHeader" >{{cv.i8n.languages}}</h1>
-		<!-- Group by proficiency -->
-		<span ng-repeat="level in LanguageProficiencyOrder | filter: hasProficientLanguage"
-		class="languageGroup">
-			<span class="alanguage-level" >{{level}} :</span>
-			<!-- Sort by name -->
-			<span class="language" ng-repeat="language in cv.languages |filter:{proficiency:level} | orderBy:'name'">
-				{{language.name}}
-				<span ng-hide="$last">, </span>
-			</span>
-		</span>
-		<p class="floatEnd"></p>
-	</section>
-	<section ng-show="cv.skills">
-		<h1>{{cv.i8n.skills}}</h1>
-		<span
-		class="skill tag"
-		ng-class="{ skill: true, tag: true, importantSkill: skillHasTag(skill,'webdev') }"
-		ng-repeat="skill in cv.skills | filter:skillFilter | orderBy:'+name'">
-			{{skill.name}}
-		</span>
-		<!-- Sort by name -->
-		<p class="floatEnd"></p>
-	</section>
 </body>
 </html>

@@ -8,7 +8,7 @@ Array::containsWith = (property,value)->
 
 
 
-@CvController = ($scope, $http) ->
+CvController = ($scope, $http, $sanitize) ->
 
 	# Read the CV from a js file
 	instantiate = (cvName)->
@@ -63,3 +63,7 @@ Array::containsWith = (property,value)->
 	$scope.hasProficientLanguage = (proficiency)->
 		return false if proficiency == $scope.cv.LanguageProficiency.BEGINNER
 		$scope.cv.languages.containsWith "proficiency", proficiency
+
+angular
+.module("CVapp", [ "ngSanitize" ])
+.controller "CvController", [ "$scope", "$http", "$sanitize", CvController]
