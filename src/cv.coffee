@@ -25,6 +25,7 @@ CvController = ($scope, $http, $sanitize) ->
 			$scope.LanguageProficiencyOrder = [
 				$scope.cv.LanguageProficiency.BEGINNER
 				$scope.cv.LanguageProficiency.INTERMEDIATE
+				$scope.cv.LanguageProficiency.ADVANCED
 				$scope.cv.LanguageProficiency.FLUENT
 			]
 
