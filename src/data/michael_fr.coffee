@@ -56,11 +56,11 @@
 	]
 
 	cv.objective = "Après quelques années de développement en C++,
-	grâce à un projet personnel je me suis intéressé au développement web.
+	grâce à un projet personnel je me suis intéressé au <b>développement web</b>.
 	Ça m'incite à changer mon parcours professionnel.
-
-	Je cherche à améliorer mes compétences avec les personnes autours de moi
-	en travaillant dans une équipe ouverte et serviable."
+	<br/>
+	La documentation, tutoriels et projets personnelles m'ont beaucoup appris. Maintenant je cherche à améliorer mes compétences avec les personnes autours de moi,
+	en travaillant <b>sur des applications webs</b> dans une équipe ouverte et serviable."
 
 	cv.skills = [
 			{
