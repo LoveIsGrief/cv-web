@@ -55,12 +55,15 @@
 		}
 	]
 
-	cv.objective = "After a few years in C++ software development,
-	a side project has gotten me very interested in web development
-	and prompted me to change career paths to become a web developer.
+	cv.objective = "After a few years in C++ software development
+	personal side projects (some listed below) have gotten me very interested in web development.
+	They prompted me to change career paths to become a <b>web developer</b>.
 
-	I look to learn from those around me and work with an open and helpful team
-	to build eloquent web applications.
+	<br/>
+
+	Documentation and tutorials are the source of my current web development knowledge.
+	Now I look to learn from those around me. The goal is to work with an open and helpful team
+	to <b>build eloquent web applications</b>.
 	"
 
 	cv.skills = [
