@@ -44,6 +44,7 @@ CvController = ($scope, $http, $sanitize) ->
 	# For the moment not configurable by user
 	# Code has to be edited
 	# Object to use with | filter
+	$scope.skillFilter = { tags: "dev" }
 
 	$scope.skillHasTag = (skill, tag) ->
 		for aTag in skill.tags
