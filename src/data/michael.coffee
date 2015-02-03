@@ -408,12 +408,20 @@
 				"Vagrant"
 				"VPS"
 			]
+			role: "Development of the web application functions on the front-end and backend. With a little bit more time on my hands general tasks were also my responsibility."
+			actions: [
+				"Configuration and setup of the Ubuntu VPS (accounts, SSH, services, etc.)"
+				"Jenkins setup and configuration"
+				"Research of frameworks (Rails vs Django vs LAMP vs MEAN vs SailsJS, RSpec vs Cucumber, AngularJS vs KnockoutJS vs JQuery vs others, etc.) to use with pros and cons"
+				"Setup of Vagrant guest using Ansible"
+				"Implementation of controllers and models on the front-end and in the backend"
+			]
 		}
 		{
 			name: "webChatApp"
 			url: "https://github.com/LoveIsGrief/webchatApp"
 			description: [
-				"First project using nodejs as a webserver."
+				"First project using nodejs as a web server."
 				"The goal was a single-page, web application for real-time chatting."
 			]
 			technologies: [
@@ -423,16 +431,22 @@
 				"Git"
 				"Grunt"
 				"Jasmine"
-				"Karma Testrunner"
+				"Karma Test runner"
 				"Protractor"
 				"Socket.io"
+			]
+			role: "As the sole developer the appropriate backend framework, test-runners and programming language (Javascript or Coffeescript) had to be chosen. Conceptualization, implementation and testing were my tasks as well."
+			actions: [
+				"ExpressJS and MEAN were chosen as a base as they seemed like the easiest to learn and would yield the quickest results (SailsJS introduction was lacking)"
+				"Socket.io was chosen over XMPP to learn Socket.io and for the proclaimed speed and simplicity"
+				"Karma was chosen over Mocha as it came with MEAN and is also introduced as the standard test-runner for AngularJS. Same goes for Protractor"
 			]
 		}
 		{
 			name: "collaborative-playlist-views"
 			url: "http://loveisgrief.github.io/collaborative-playlist-views/"
 			description: [
-				"A purely front-end, \"proof of concept\" project visualising an idea to facilitate collaborative playlist generation and use."
+				"A purely front-end, \"proof of concept\" project visualizing an idea to facilitate collaborative playlist generation and use."
 			]
 			technologies: [
 				"AngularJS"
@@ -441,6 +455,11 @@
 				"Coffeescript"
 				"Git"
 				"Grunt"
+			]
+			role: "Conception and implementation of the idea."
+			actions: [
+				"Decision to visualize the solution and make it db-less after console testing seemed dull"
+				"Bootstrap over custom CSS as it figuratively bootstraps the design process"
 			]
 		}
 		{
@@ -455,13 +474,20 @@
 				"Git"
 				"Grunt"
 				"Jasmine"
-				"Karma Testrunner"
+				"Karma Test runner"
 				"TravisCI"
+			]
+			role: "Adoption from videojs-youtube plugin, which was the most readable and complete plugin implementation for videojs"
+			actions: [
+				"Testing was introduced quite late after multiple commits kept breaking different parts of the code"
+				"TravisCI was chosen as the continuous integration host, because hosting one myself wasn't an option and it subjectively seems to be the most prominent one on Github"
 			]
 		}
 	]
 
 	cv.i8n =
+		at: "at"
+		actions: "Actions"
 		certificates: "Certificates"
 		description: "Description"
 		jobs: "Work History"
@@ -470,7 +496,7 @@
 		objective: "Objective"
 		projects: "Projects"
 		responsibilities: "Responsibilities"
+		role: "Role"
 		skills: "Skills"
 		studies: "Education"
-		at: "at"
 	cv
