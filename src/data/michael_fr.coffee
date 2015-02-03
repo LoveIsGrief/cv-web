@@ -94,13 +94,6 @@
 				]
 			}
 			{
-				name: "PHP"
-				proficiency: cv.Proficiency.NOVICE
-				tags: [
-					"webdev"
-				]
-			}
-			{
 				name: "AutoIt"
 				proficiency: cv.Proficiency.NOVICE
 				tags: [
@@ -317,7 +310,7 @@
 				university: "Westsäschische Hochschule Zwickau"
 				degree: " BSc, Informatique, Développement des systèmes"
 				description: [
-					"- Projets orientés sur Java et C++ avec une première approche en Assembleur et Smalltalk"
+					"- Études orientés sur Java et C++ "
 					"- Projet de fin d’étude: jeu éducatif en C# pour l’apprentissage de la résolution du Rubik's cube (avec une résolution automatique)"
 				]
 				startDate: new Date "2007-10-01"
@@ -404,6 +397,13 @@
 				"Vagrant"
 				"VPS"
 			]
+			role: "Développement des fonctionnalités dans le frontend et le backend. Les tâches courant comme l'installation et configuration des logiciels et systèmes ont fait parti de mes responsabilités."
+			actions: [
+				"Installation et configuration du VPS Ubuntu (comptes, SSH, services, Jenkins etc.)"
+				"Recherche des frameworks (Rails vs Django vs LAMP vs MEAN vs SailsJS, RSpec vs Cucumber, AngularJS vs KnockoutJS vs JQuery vs autres, etc.) avec les avantages et inconvénients"
+				"Initialisation de la machine virtuelle Vagrant en utilisant Ansible"
+				"Implémentation des contrôleurs et modelés coté frontend et backend"
+			]
 		}
 		{
 			name: "webChatApp"
@@ -419,16 +419,23 @@
 				"Git"
 				"Grunt"
 				"Jasmine"
-				"Karma Testrunner"
+				"Karma Test-runner"
 				"Protractor"
 				"Socket.io"
+			]
+			role: "Dans ce projet solitaire je devais choisir des composants adéquats, dont un framework du backend et un autre pour le frontend, lanceurs des tests et un langage de programmation (Javascript ou Coffeescript).
+			La conception, implémentation et les etaient mes responsabilités aussi."
+			actions: [
+				"MEAN était choisi pour la fondation du projet, car il est bien documenté et convenable pour l’apprentissage autodidacte, donc pour obtenir des résultats le plus rapidement"
+				"Pour la communication dynamique entre client et serveur, grâce à sa vitesse et simplicité proclamée, Socket.io était choisi au lieu de AJAX"
+				"En tant que lanceur des tests, Karma était la première choix parce que MEAN l'utilise par défaut"
 			]
 		}
 		{
 			name: "collaborative-playlist-views"
 			url: "http://loveisgrief.github.io/collaborative-playlist-views/"
 			description: [
-				"Conceptualisation et visualisation d'une idée pour la génération d'une liste de lecture collaborative à plusieurs utilisateurs."
+				"Conception et visualisation d'une idée pour la génération d'une liste de lecture collaborative à plusieurs utilisateurs."
 			]
 			technologies: [
 				"AngularJS"
@@ -438,12 +445,17 @@
 				"Git"
 				"Grunt"
 			]
+			role: "Conception, implémentation et teste d'idée."
+			actions: [
+				"Prise de décision de visualiser la solution sans utiliser une DB après les tests en console étaient trop ternes et ne pouvaient pas montrer l'utilisation en réelle"
+				"Choix de prendre bootstrap au lieu du CSS customisé pour rapidement avoir un site visuellement acceptable"
+			]
 		}
 		{
 			name: "videojs-soundcloud"
 			url: "https://github.com/LoveIsGrief/videojs-soundcloud"
 			description: [
-				"Un plugin pour ajouter la capacité de lire un lien soundcloud dans un lecteur de média sur le web (video.js). Testé automatiquement après chaque changement de code"
+				"Un plugin pour ajouter la capacité de lire un lien soundcloud dans un lecteur de média sur le web (video.js). Testé automatiquement après chaque changement de code."
 			]
 			technologies: [
 				"Codo"
@@ -451,22 +463,29 @@
 				"Git"
 				"Grunt"
 				"Jasmine"
-				"Karma Testrunner"
+				"Karma Test-runner"
+			]
+			role: "Adaptation de videojs-youtube, qui est l’implémentation d'un plugin pour videojs le plus complet et lisible."
+			actions: [
+				"Introduction des tests après avoir eu un plugin fonctionnelle mains instable, car il a cassé plusieurs fois suite à quelques changements"
+				"Pour l’intégration continuelle TravisCI était choisi; L’hébergement est gratuit et il avait l'aire d’être proéminent et utilisé fréquemment dans les projets sur Github"
 			]
 		}
 	]
 
 	cv.i8n =
+		at: "à"
+		actions: "Actions"
 		certificates: "Autres diplômes"
 		description: "Description"
-		jobs: "Experiences professionnelles"
+		jobs: "Expériences professionnelles"
 		languages: "Langues"
 		now: "maintenant"
 		objective: "Objectif"
 		projects: "Projets"
-		responsibilities: "Résponsabilités"
+		role: "Rôle"
+		responsibilities: "Responsabilités"
 		skills: "Compétences"
-		studies: "Etudes"
-		at: "à"
+		studies: "Études"
 
 	cv
