@@ -55,12 +55,11 @@
 		}
 	]
 
-	cv.objective = "Après quelques années de développement en C++,
-	grâce à un projet personnel je me suis intéressé au <b>développement web</b>.
-	Ça m'incite à changer mon parcours professionnel.
+	cv.objective = "Après quelques années de développement en C++, suite et grâce à un projet personnel, je me suis intéressé au <b>développement web</b>. C'est ainsi que j'ai décidé de donner une nouvelle direction à mon parcours professionnel.
 	<br/>
-	La documentation, tutoriels et projets personnelles m'ont beaucoup appris. Maintenant je cherche à améliorer mes compétences avec les personnes autours de moi,
-	en travaillant <b>sur des applications webs</b> dans une équipe ouverte et serviable."
+	En effet la collaboration, la documentation et les tutoriels m'ont énormément appris lors de mes projets personnels. Maintenant je cherche donc à mettre en application et améliorer mes compétences dans le domaine.
+	<br/>
+	Ainsi je suis convaincu qu'avec mon expérience et ma motivation, <b>travailler sur des applications web</b> dans une équipe ouverte et formatrice, sera une réussite."
 
 	cv.skills = [
 			{
@@ -292,12 +291,12 @@
 				employer: "GFI Informatique"
 				company: "Amadeus SAS"
 				responsibilities: [
-					"Correction de bugs, maintenance et tests de non-regression (C++, applications internes, Python, zsh)"
-					"Implémentation de nouvelles features (C++)"
+					"Correction de bugs, maintenance et tests de non-régression (C++, applications internes, Python, zsh)"
+					"Implémentation de nouvelles fonctionnalités (C++)"
 					"Écriture des scripts en Python, Ruby et bash/zsh"
 					"Configuration des systèmes et changements techniques et architecturaux (XML, SQL)"
-					"Migration de backends entre plusieurs systèms"
-					"Développement en Scrum avec du reportage hebdomadaire"
+					"Migration de backends entre plusieurs systèmes"
+					"Développement en Scrum incluant des rapports hebdomadaires"
 				]
 				description: "Embauché par GFI Informatique"
 				startDate: new Date "2011-10-19"
@@ -374,10 +373,10 @@
 
 	cv.projects = [
 		{
-			name: "Projet privé d’initiation au web"
+			name: "Projet personnel d’initiation au web"
 			description: [
 				"Premier projet web en pair, test-driven programming pour apprendre Angular et Ruby on Rails."
-				"Un utilisateur peut chercher et lire des contenus audio-visuels en utilisant les APIs de fournisseurs de contenu e.g youtube, soundcloud, dailymotion, etc."
+				"Un utilisateur peut chercher et lire des contenus audio-visuels en utilisant les APIs de fournisseurs de contenu tel que youtube, soundcloud, dailymotion, etc..."
 			]
 			technologies: [
 				"AngularJS"
@@ -397,12 +396,12 @@
 				"Vagrant"
 				"VPS"
 			]
-			role: "Développement des fonctionnalités dans le frontend et le backend. Les tâches courant comme l'installation et configuration des logiciels et systèmes ont fait parti de mes responsabilités."
+			role: "Développement des fonctionnalités dans le frontend et le backend. Les tâches courantes comme l'installation et configuration des logiciels et systèmes ont fait parti de mes responsabilités."
 			actions: [
-				"Installation et configuration du VPS Ubuntu (comptes, SSH, services, Jenkins etc.)"
-				"Recherche des frameworks (Rails vs Django vs LAMP vs MEAN vs SailsJS, RSpec vs Cucumber, AngularJS vs KnockoutJS vs JQuery vs autres, etc.) avec les avantages et inconvénients"
+				"Installation et configuration du VPS Ubuntu (comptes, SSH, services, Jenkins etc...)"
+				"Recherche des frameworks (Rails vs Django vs LAMP vs MEAN vs SailsJS, RSpec vs Cucumber, AngularJS vs KnockoutJS vs JQuery vs autres, etc...) avec ses avantages et inconvénients"
 				"Initialisation de la machine virtuelle Vagrant en utilisant Ansible"
-				"Implémentation des contrôleurs et modelés coté frontend et backend"
+				"Implémentation des contrôleurs et modèles du coté frontend et backend"
 			]
 		}
 		{
@@ -423,19 +422,21 @@
 				"Protractor"
 				"Socket.io"
 			]
-			role: "Dans ce projet solitaire je devais choisir des composants adéquats, dont un framework du backend et un autre pour le frontend, lanceurs des tests et un langage de programmation (Javascript ou Coffeescript).
-			La conception, implémentation et les etaient mes responsabilités aussi."
+			role: "Dans ce projet solitaire je devais choisir des composants adéquats, dont un framework différent pour le backend et pour le frontend, des lanceurs de tests et un langage de programmation (Javascript ou Coffeescript).
+			La conception, implémentation et la validation étaient aussi mes responsabilités."
 			actions: [
-				"MEAN était choisi pour la fondation du projet, car il est bien documenté et convenable pour l’apprentissage autodidacte, donc pour obtenir des résultats le plus rapidement"
-				"Pour la communication dynamique entre client et serveur, grâce à sa vitesse et simplicité proclamée, Socket.io était choisi au lieu de AJAX"
-				"En tant que lanceur des tests, Karma était la première choix parce que MEAN l'utilise par défaut"
+				"MEAN a été choisi pour la fondation du projet, car il est bien documenté et convenable pour un apprentissage autodidacte, donc pour obtenir des résultats concrets le plus rapidement possible"
+				"Pour la communication dynamique entre client et serveur, grâce à sa vitesse et simplicité proclamée, Socket.io était un meilleur candidat que AJAX"
+				"En tant que lanceur de tests, Karma était le premier choix parce que MEAN l'utilise par défaut"
 			]
 		}
 		{
 			name: "collaborative-playlist-views"
 			url: "http://loveisgrief.github.io/collaborative-playlist-views/"
 			description: [
-				"Conception et visualisation d'une idée pour la génération d'une liste de lecture collaborative à plusieurs utilisateurs."
+				"Conception et visualisation d'une idée pour la génération d'une liste de lecture collaborative entre plusieurs utilisateurs."
+				"Une telle liste (normalement une table dans une DB) contient des objets partagés et pour chaque utilisateur, une vue qu'il peut customiser pour afficher tel ou tel objet. Cette action est donc locale, car si elle était globale l'objet ne serait visible pour personne.
+				"
 			]
 			technologies: [
 				"AngularJS"
@@ -445,17 +446,17 @@
 				"Git"
 				"Grunt"
 			]
-			role: "Conception, implémentation et teste d'idée."
+			role: "Conception, implémentation et test de l'idée."
 			actions: [
-				"Prise de décision de visualiser la solution sans utiliser une DB après les tests en console étaient trop ternes et ne pouvaient pas montrer l'utilisation en réelle"
-				"Choix de prendre bootstrap au lieu du CSS customisé pour rapidement avoir un site visuellement acceptable"
+				"Simulation de la table d'objets partagés coté client pour héberger la page sur Github, qui ne fourni aucune DB pour les projets"
+				"Visualisation de la table simulée et des vues utilisateurs avec AngularJS et Bootstrap afin d'améliorer les phases de tests et afficher les applications en temps réel"
 			]
 		}
 		{
 			name: "videojs-soundcloud"
 			url: "https://github.com/LoveIsGrief/videojs-soundcloud"
 			description: [
-				"Un plugin pour ajouter la capacité de lire un lien soundcloud dans un lecteur de média sur le web (video.js). Testé automatiquement après chaque changement de code."
+				"Un plugin pour ajouter la capacité de lire un lien soundcloud dans un lecteur de média sur le web (video.js). Testé automatiquement après chaque changement de code (méthode TDD)."
 			]
 			technologies: [
 				"Codo"
@@ -467,8 +468,8 @@
 			]
 			role: "Adaptation de videojs-youtube, qui est l’implémentation d'un plugin pour videojs le plus complet et lisible."
 			actions: [
-				"Introduction des tests après avoir eu un plugin fonctionnelle mains instable, car il a cassé plusieurs fois suite à quelques changements"
-				"Pour l’intégration continuelle TravisCI était choisi; L’hébergement est gratuit et il avait l'aire d’être proéminent et utilisé fréquemment dans les projets sur Github"
+				"Introduction des tests après avoir eu un plugin fonctionnel mais instable (par exemple la résolution d'un bogue enchaînait sur un autre bogue)"
+				"Processus d'intégration continune avec Travis-CI (recommandé par la communauté Github)"
 			]
 		}
 	]
